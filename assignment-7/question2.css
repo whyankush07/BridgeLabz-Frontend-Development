@@ -1,0 +1,198 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: linear-gradient(to bottom right, #6a11cb 0%, #2575fc 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #2c3e50;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Main Content Styles - Using Flexbox for centering */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+/* Container - Flexbox for horizontal and vertical centering */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    width: 100%;
+}
+
+/* Base Box Styles */
+.box {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.box h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.box p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Scrollable content area */
+.scrollable-content {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Box 1: Fixed Pixel Dimensions with Overflow */
+.box-pixels {
+    /* Fixed dimensions using pixels */
+    width: 300px;
+    height: 200px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    /* Overflow property - scroll when content exceeds dimensions */
+    overflow: auto;
+}
+
+.box-pixels h3 {
+    border-bottom-color: #ffffff;
+    color: #ffffff;
+}
+
+.box-pixels p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Box 2: Percentage Width + Viewport Height with constraints */
+.box-percentage {
+    /* Width as percentage of parent container */
+    width: 40%;
+    /* Minimum height using viewport units */
+    min-height: 30vh;
+    /* Maximum width constraint */
+    max-width: 450px;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: #ffffff;
+    overflow: auto;
+}
+
+.box-percentage h3 {
+    border-bottom-color: #ffffff;
+    color: #ffffff;
+}
+
+.box-percentage p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Box 3: Em Units (relative to font size) */
+.box-em {
+    /* Dimensions using em units (relative to font-size) */
+    width: 20em;
+    height: 15em;
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: #ffffff;
+    /* Auto overflow - shows scrollbar only when needed */
+    overflow: auto;
+    /* Setting font size to demonstrate em scaling */
+    font-size: 16px;
+}
+
+.box-em h3 {
+    border-bottom-color: #ffffff;
+    color: #ffffff;
+}
+
+.box-em p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Footer Styles */
+footer {
+    background-color: rgba(255, 255, 255, 0.95);
+    color: #2c3e50;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    
+    /* Adjust box-percentage for smaller screens */
+    .box-percentage {
+        width: 90%;
+        min-width: 280px;
+    }
+    
+    .box-pixels {
+        width: 90%;
+        max-width: 350px;
+    }
+    
+    .box-em {
+        width: 90%;
+        max-width: 350px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+}

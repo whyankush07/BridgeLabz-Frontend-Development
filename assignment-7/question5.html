@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 5 - Advanced CSS Selectors</title>
+    <link rel="stylesheet" href="question5.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Advanced CSS Selectors Demonstration</h1>
+        <p>Exploring attribute selectors, pseudo-classes, pseudo-elements, and combinators</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Section 1: Attribute Selectors -->
+        <section class="demo-section">
+            <h2>Attribute Selectors</h2>
+            <div class="content">
+                <p>Attribute selectors allow you to select elements based on their attributes and values.</p>
+                
+                <form class="demo-form">
+                    <label for="username">Text Input:</label>
+                    <input type="text" id="username" placeholder="Username" class="form-input">
+                    
+                    <label for="email">Email Input:</label>
+                    <input type="email" id="email" placeholder="email@example.com" class="form-input">
+                    
+                    <label for="password">Password Input:</label>
+                    <input type="password" id="password" placeholder="Password" class="form-input">
+                </form>
+                
+                <div class="links-demo">
+                    <p>Links with different protocols:</p>
+                    <a href="https://www.example.com">HTTPS Link</a>
+                    <a href="http://www.example.com">HTTP Link</a>
+                    <a href="page.html">Internal Link</a>
+                    <a href="mailto:test@example.com">Email Link</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Pseudo-classes -->
+        <section class="demo-section">
+            <h2>Pseudo-classes</h2>
+            <div class="content">
+                <p>Pseudo-classes style elements based on their state or position.</p>
+                
+                <ul class="item-list">
+                    <li>First Item - Styled with :first-child</li>
+                    <li>Second Item - Styled with :nth-child(2)</li>
+                    <li>Third Item - Styled with :nth-child(3)</li>
+                    <li>Fourth Item - Styled with :nth-child(even)</li>
+                    <li>Fifth Item - Styled with :nth-child(odd)</li>
+                    <li>Last Item - Styled with :last-child</li>
+                </ul>
+                
+                <div class="hover-demo">
+                    <button class="demo-button">Hover Over Me</button>
+                    <input type="text" class="focus-input" placeholder="Click to focus">
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Pseudo-elements -->
+        <section class="demo-section">
+            <h2>Pseudo-elements</h2>
+            <div class="content">
+                <p class="pseudo-demo">
+                    This paragraph demonstrates pseudo-elements. The ::before pseudo-element adds content before the element, 
+                    and the ::after pseudo-element adds content after it. These are powerful tools for adding decorative 
+                    elements without extra HTML markup.
+                </p>
+                
+                <div class="quote-box">
+                    <p>CSS pseudo-elements let you style specific parts of an element's content.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Combinators -->
+        <section class="demo-section">
+            <h2>CSS Combinators</h2>
+            <div class="content">
+                <p>Combinators define relationships between selectors.</p>
+                
+                <div class="combinator-demo">
+                    <div class="parent">
+                        <h3>Parent Element</h3>
+                        <p>Child paragraph (descendant combinator)</p>
+                        <div class="child">
+                            <p>Nested child paragraph</p>
+                        </div>
+                    </div>
+                    
+                    <p class="adjacent">Adjacent sibling paragraph (+ combinator)</p>
+                    <p class="general-sibling">General sibling paragraph (~ combinator)</p>
+                    <p class="general-sibling">Another general sibling</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Nakul Saini | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

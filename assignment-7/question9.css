@@ -1,0 +1,348 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Main Content Area */
+main {
+    flex: 1;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Form Container */
+.form-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    margin-bottom: 3rem;
+}
+
+.form-container h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.form-description {
+    font-size: 1.1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-style: italic;
+}
+
+/* Demo Form */
+.demo-form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Form Group - Ensures uniform spacing */
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+/* Base Input and Textarea Styles */
+input,
+textarea {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    color: #2c3e50;
+    background-color: #f8f9fa;
+    border: 2px solid #ddd;
+    /* Padding for neat appearance */
+    padding: 0.9rem 1.2rem;
+    /* Border-radius for rounded corners */
+    border-radius: 10px;
+    /* Subtle shadow for depth */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    /* Remove default outline */
+    outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999;
+}
+
+/* Hover Effects */
+input:hover,
+textarea:hover {
+    border-color: #bbb;
+    background-color: #ffffff;
+}
+
+/* Input with Solid Outline on Focus */
+.input-solid:focus {
+    border-color: #3498db;
+    background-color: #ffffff;
+    /* Solid outline style */
+    outline: 3px solid #3498db;
+    /* Outline offset - space between element and outline */
+    outline-offset: 3px;
+}
+
+/* Input with Dashed Outline on Focus */
+.input-dashed:focus {
+    border-color: #2ecc71;
+    background-color: #ffffff;
+    /* Dashed outline style */
+    outline: 3px dashed #2ecc71;
+    outline-offset: 5px;
+}
+
+/* Input with Dotted Outline on Focus */
+.input-dotted:focus {
+    border-color: #9b59b6;
+    background-color: #ffffff;
+    /* Dotted outline style */
+    outline: 3px dotted #9b59b6;
+    outline-offset: 4px;
+}
+
+/* Input with Double Outline on Focus */
+.input-double:focus {
+    border-color: #e74c3c;
+    background-color: #ffffff;
+    /* Double outline style */
+    outline: 5px double #e74c3c;
+    outline-offset: 2px;
+}
+
+/* Textarea with Ridge Outline on Focus */
+.textarea-ridge:focus {
+    border-color: #f39c12;
+    background-color: #ffffff;
+    /* Ridge outline style */
+    outline: 4px ridge #f39c12;
+    outline-offset: 3px;
+}
+
+/* Textarea with Groove Outline on Focus */
+.textarea-groove:focus {
+    border-color: #1abc9c;
+    background-color: #ffffff;
+    /* Groove outline style */
+    outline: 4px groove #1abc9c;
+    outline-offset: 4px;
+}
+
+/* Textarea specific styles */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Field Information Text */
+.field-info {
+    display: block;
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Focus state for submit button */
+.submit-btn:focus {
+    outline: 3px solid #764ba2;
+    outline-offset: 3px;
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Information Section */
+.info-section {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.info-section h2 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Info Grid */
+.info-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.info-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.info-card h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.info-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 2rem 1.5rem;
+    }
+    
+    .form-container h2 {
+        font-size: 2rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .info-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .info-section h2 {
+        font-size: 2rem;
+    }
+    
+    .info-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 2rem 1rem;
+    }
+    
+    .form-container {
+        padding: 1.5rem 1rem;
+    }
+    
+    input,
+    textarea {
+        padding: 0.8rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .submit-btn {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+}

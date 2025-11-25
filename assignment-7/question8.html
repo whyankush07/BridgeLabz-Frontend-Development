@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 8 - Box Model Exploration</title>
+    <link rel="stylesheet" href="question8.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>CSS Box Model Exploration</h1>
+        <p>Understanding Content, Padding, Border, and Margin</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Introduction Section -->
+        <section class="intro-section">
+            <h2>What is the CSS Box Model?</h2>
+            <p>
+                The CSS box model is a fundamental concept that describes how elements are rendered 
+                on a web page. Every element is represented as a rectangular box, consisting of four 
+                distinct layers: content, padding, border, and margin.
+            </p>
+        </section>
+
+        <!-- Box Model Demonstration Container -->
+        <section class="demo-container">
+            <!-- Default Box Sizing Demonstration -->
+            <article class="box-demo">
+                <h3>Default Box Sizing (content-box)</h3>
+                <p class="explanation">
+                    Width and height apply only to the content area. 
+                    Padding and border are added to the total size.
+                </p>
+                
+                <div class="box-wrapper">
+                    <div class="margin-layer default-box">
+                        <span class="layer-label">Margin (20px)</span>
+                        <div class="border-layer">
+                            <span class="layer-label">Border (5px solid)</span>
+                            <div class="padding-layer">
+                                <span class="layer-label">Padding (30px)</span>
+                                <div class="content-layer">
+                                    <span class="layer-label">Content</span>
+                                    <p class="content-text">Width: 200px<br>Height: 150px</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculation">
+                    <h4>Total Size Calculation:</h4>
+                    <p>Width = 200px (content) + 60px (padding) + 10px (border) = <strong>270px</strong></p>
+                    <p>Height = 150px (content) + 60px (padding) + 10px (border) = <strong>220px</strong></p>
+                    <p class="note">Margin is not included in the element's actual size</p>
+                </div>
+            </article>
+
+            <!-- Border Box Sizing Demonstration -->
+            <article class="box-demo">
+                <h3>Border Box Sizing (border-box)</h3>
+                <p class="explanation">
+                    Width and height include content, padding, and border. 
+                    This makes sizing more predictable and easier to manage.
+                </p>
+                
+                <div class="box-wrapper">
+                    <div class="margin-layer border-box">
+                        <span class="layer-label">Margin (20px)</span>
+                        <div class="border-layer">
+                            <span class="layer-label">Border (5px solid)</span>
+                            <div class="padding-layer">
+                                <span class="layer-label">Padding (30px)</span>
+                                <div class="content-layer">
+                                    <span class="layer-label">Content</span>
+                                    <p class="content-text">Width: 200px<br>Height: 150px</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="calculation">
+                    <h4>Total Size Calculation:</h4>
+                    <p>Width = <strong>200px</strong> (includes content + padding + border)</p>
+                    <p>Height = <strong>150px</strong> (includes content + padding + border)</p>
+                    <p class="note">Content area shrinks to accommodate padding and border</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Detailed Explanation Section -->
+        <section class="explanation-section">
+            <h2>Box Model Layers Explained</h2>
+            <div class="layers-grid">
+                <div class="layer-card content-card">
+                    <h3>📦 Content</h3>
+                    <p>
+                        The innermost layer where text, images, and other content appear. 
+                        Its size is determined by the width and height properties.
+                    </p>
+                </div>
+                
+                <div class="layer-card padding-card">
+                    <h3>📏 Padding</h3>
+                    <p>
+                        Space between the content and the border. Creates internal breathing room 
+                        and is part of the element's background area.
+                    </p>
+                </div>
+                
+                <div class="layer-card border-card">
+                    <h3>🖼️ Border</h3>
+                    <p>
+                        A line surrounding the padding and content. Can have different styles, 
+                        widths, and colors for visual definition.
+                    </p>
+                </div>
+                
+                <div class="layer-card margin-card">
+                    <h3>↔️ Margin</h3>
+                    <p>
+                        The outermost layer creating space between elements. Margins are transparent 
+                        and separate elements from their neighbors.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Nakul Saini | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

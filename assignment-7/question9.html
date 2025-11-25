@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 9 - Outline and Focus Styling Form</title>
+    <link rel="stylesheet" href="question9.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Outline and Focus Styling</h1>
+        <p>Interactive form demonstrating outline properties and focus states</p>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Form Container -->
+        <section class="form-container">
+            <h2>Contact Form</h2>
+            <p class="form-description">Click on any field to see the outline and focus effects</p>
+            
+            <form class="demo-form">
+                <!-- Name Input - Solid Outline -->
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        class="input-solid"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                    <small class="field-info">Outline Style: Solid | Offset: 3px</small>
+                </div>
+
+                <!-- Email Input - Dashed Outline -->
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        class="input-dashed"
+                        placeholder="your.email@example.com"
+                        required
+                    >
+                    <small class="field-info">Outline Style: Dashed | Offset: 5px</small>
+                </div>
+
+                <!-- Phone Input - Dotted Outline -->
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input 
+                        type="tel" 
+                        id="phone" 
+                        name="phone" 
+                        class="input-dotted"
+                        placeholder="+1 (123) 456-7890"
+                    >
+                    <small class="field-info">Outline Style: Dotted | Offset: 4px</small>
+                </div>
+
+                <!-- Subject Input - Double Outline -->
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input 
+                        type="text" 
+                        id="subject" 
+                        name="subject" 
+                        class="input-double"
+                        placeholder="What is this about?"
+                        required
+                    >
+                    <small class="field-info">Outline Style: Double | Offset: 2px</small>
+                </div>
+
+                <!-- Message Textarea - Ridge Outline -->
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea 
+                        id="message" 
+                        name="message" 
+                        rows="6" 
+                        class="textarea-ridge"
+                        placeholder="Write your message here..."
+                        required
+                    ></textarea>
+                    <small class="field-info">Outline Style: Ridge | Offset: 3px</small>
+                </div>
+
+                <!-- Preferences Textarea - Groove Outline -->
+                <div class="form-group">
+                    <label for="preferences">Additional Preferences</label>
+                    <textarea 
+                        id="preferences" 
+                        name="preferences" 
+                        rows="4" 
+                        class="textarea-groove"
+                        placeholder="Any special requirements or preferences?"
+                    ></textarea>
+                    <small class="field-info">Outline Style: Groove | Offset: 4px</small>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="submit-btn">Submit Form</button>
+            </form>
+        </section>
+
+        <!-- Information Section -->
+        <section class="info-section">
+            <h2>Understanding Outline Properties</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>📝 Outline vs Border</h3>
+                    <p>
+                        Unlike borders, outlines don't take up space and don't affect the element's 
+                        dimensions. They're drawn outside the border edge and can overlap other content.
+                    </p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>🎯 Outline-Offset</h3>
+                    <p>
+                        The outline-offset property adds space between an outline and the edge of 
+                        an element. Positive values move the outline outward, negative values inward.
+                    </p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>🔍 Focus States</h3>
+                    <p>
+                        The :focus selector targets elements when they receive keyboard focus or 
+                        are clicked. It's crucial for accessibility and user experience.
+                    </p>
+                </div>
+                
+                <div class="info-card">
+                    <h3>🎨 Outline Styles</h3>
+                    <p>
+                        CSS supports various outline styles: solid, dashed, dotted, double, groove, 
+                        ridge, inset, and outset. Each creates a different visual effect.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Nakul Saini | All Rights Reserved</p>
+    </footer>
+</body>
+</html>

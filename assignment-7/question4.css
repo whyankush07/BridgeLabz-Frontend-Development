@@ -1,0 +1,248 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles with Text Shadow */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    /* Text shadow for depth on heading */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3),
+                 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+    /* Subtle text shadow */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Area */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 2rem;
+}
+
+/* Cards Container using Flexbox */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    max-width: 1400px;
+}
+
+/* Base Card Styles */
+.card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 320px;
+    overflow: hidden;
+    /* Smooth transition for hover effects */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+/* Card Header */
+.card-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2.5rem 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Avatar Circle */
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #667eea;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Body */
+.card-body {
+    padding: 2rem 1.5rem;
+}
+
+.card-body h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    /* Text shadow on card headings for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.role {
+    font-size: 1rem;
+    color: #667eea;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Card 1: Soft Shadow */
+.card-soft {
+    /* Soft, subtle box shadow */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-soft:hover {
+    /* Lift effect with larger shadow on hover */
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Card 2: Medium Shadow */
+.card-medium {
+    /* Medium depth box shadow */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-medium:hover {
+    /* Enhanced lift effect */
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+.card-medium .card-header {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.card-medium .avatar {
+    color: #f5576c;
+}
+
+.card-medium .role {
+    color: #f5576c;
+}
+
+.card-medium .skill-tag {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Card 3: Strong Shadow */
+.card-strong {
+    /* Strong, dramatic box shadow */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-strong:hover {
+    /* Maximum lift effect */
+    transform: translateY(-15px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+.card-strong .card-header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.card-strong .avatar {
+    color: #00f2fe;
+}
+
+.card-strong .role {
+    color: #00f2fe;
+}
+
+.card-strong .skill-tag {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    /* Text shadow on footer text */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 90%;
+        max-width: 400px;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Additional hover effect for card body */
+.card:hover .card-body h2 {
+    /* Enhanced text shadow on hover */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+}

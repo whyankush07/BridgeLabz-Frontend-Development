@@ -1,0 +1,422 @@
+/* Global Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.95;
+}
+
+/* Main Content Area */
+main {
+    flex: 1;
+    padding: 3rem 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Introduction Section */
+.intro-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.intro-section h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+.intro-section p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Demo Container - Using Flexbox for centering */
+.demo-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+/* Box Demo Article */
+.box-demo {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 450px;
+    max-width: 600px;
+}
+
+.box-demo h3 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.box-demo .explanation {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-style: italic;
+}
+
+/* Box Wrapper for Centering */
+.box-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+    min-height: 350px;
+}
+
+/* Margin Layer - Outermost layer */
+.margin-layer {
+    position: relative;
+    /* Margin visualization using outline */
+    outline: 3px dashed #e74c3c;
+    outline-offset: 0px;
+    background-color: rgba(231, 76, 60, 0.1);
+    padding: 20px;
+}
+
+.margin-layer .layer-label {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #e74c3c;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+}
+
+/* Border Layer */
+.border-layer {
+    position: relative;
+    border: 5px solid #3498db;
+    background-color: rgba(52, 152, 219, 0.2);
+}
+
+.border-layer .layer-label {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #3498db;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+}
+
+/* Padding Layer */
+.padding-layer {
+    position: relative;
+    padding: 30px;
+    background-color: rgba(46, 204, 113, 0.2);
+}
+
+.padding-layer .layer-label {
+    position: absolute;
+    top: 2px;
+    left: 5px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2ecc71;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+}
+
+/* Content Layer */
+.content-layer {
+    position: relative;
+    background-color: #f39c12;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+}
+
+.content-layer .layer-label {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+}
+
+.content-text {
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2rem;
+    line-height: 1.8;
+}
+
+/* Default Box Sizing (content-box) */
+.default-box .content-layer {
+    width: 200px;
+    height: 150px;
+}
+
+/* Border Box Sizing (border-box) */
+.border-box {
+    box-sizing: border-box;
+}
+
+.border-box .content-layer {
+    width: 200px;
+    height: 150px;
+    /* In border-box, content shrinks to fit padding and border */
+}
+
+/* Calculation Box */
+.calculation {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 5px solid #667eea;
+    margin-top: 2rem;
+}
+
+.calculation h4 {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.calculation p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    font-family: 'Courier New', monospace;
+}
+
+.calculation strong {
+    color: #e74c3c;
+    font-weight: 700;
+}
+
+.calculation .note {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #7f8c8d;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Explanation Section */
+.explanation-section {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.explanation-section h2 {
+    font-size: 2.2rem;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    text-align: center;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.5rem;
+}
+
+/* Layers Grid */
+.layers-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.layer-card {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.layer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.layer-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.layer-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+/* Individual Layer Card Colors */
+.content-card {
+    background: linear-gradient(135deg, #fff7e6 0%, #ffe4b3 100%);
+    border-left: 5px solid #f39c12;
+}
+
+.content-card h3 {
+    color: #e67e22;
+}
+
+.padding-card {
+    background: linear-gradient(135deg, #e8f8f0 0%, #c8f0df 100%);
+    border-left: 5px solid #2ecc71;
+}
+
+.padding-card h3 {
+    color: #27ae60;
+}
+
+.border-card {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-left: 5px solid #3498db;
+}
+
+.border-card h3 {
+    color: #2980b9;
+}
+
+.margin-card {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border-left: 5px solid #e74c3c;
+}
+
+.margin-card h3 {
+    color: #c0392b;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+}
+
+footer p {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .demo-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .box-demo {
+        min-width: auto;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .intro-section h2,
+    .explanation-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .box-demo {
+        padding: 1.5rem;
+        min-width: auto;
+    }
+    
+    .box-wrapper {
+        min-height: auto;
+    }
+    
+    .layers-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .layer-card {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 2rem 1rem;
+    }
+    
+    .default-box .content-layer,
+    .border-box .content-layer {
+        width: 150px;
+        height: 120px;
+    }
+    
+    .margin-layer {
+        padding: 15px;
+    }
+    
+    .padding-layer {
+        padding: 20px;
+    }
+}
