@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStart - Innovative Solutions</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+</head>
+<body>
+    
+    <!-- Full-width header with navbar -->
+    <header class="bg-primary text-white">
+        <!-- container-fluid creates full-width container -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <!-- Company branding -->
+                <a class="navbar-brand fw-bold fs-3" href="#">TechStart</a>
+                
+                <!-- Navbar toggler for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Collapsible navbar content -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Hero section with large heading and CTA button -->
+        <section class="hero-section bg-light py-5">
+            <!-- container centers content with responsive padding -->
+            <div class="container text-center py-5">
+                <!-- row and col-12 create full-width responsive layout -->
+                <div class="row">
+                    <div class="col-12">
+                        <!-- Large heading for hero section -->
+                        <h1 class="display-3 fw-bold mb-3">Welcome to TechStart</h1>
+                        <!-- Subtitle with muted text color -->
+                        <p class="lead text-muted mb-4">Innovative solutions for modern businesses. Transform your ideas into reality with cutting-edge technology.</p>
+                        <!-- Primary call-to-action button with Bootstrap classes -->
+                        <a href="#" class="btn btn-primary btn-lg px-5 py-3">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features section demonstrating grid layout -->
+        <section class="features-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Our Services</h2>
+                
+                <!-- row creates horizontal group of columns -->
+                <div class="row g-4">
+                    <!-- col-md-4 means 3 columns on medium+ screens, stacks on mobile -->
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center p-4">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Web Development</h3>
+                                <p class="card-text">Build responsive and modern websites that engage your audience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center p-4">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Mobile Apps</h3>
+                                <p class="card-text">Create powerful mobile applications for iOS and Android platforms.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <div class="card h-100 text-center p-4">
+                            <div class="card-body">
+                                <h3 class="card-title h4 mb-3">Cloud Solutions</h3>
+                                <p class="card-text">Scale your business with reliable cloud infrastructure and services.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About section with two-column layout -->
+        <section class="about-section bg-light py-5">
+            <div class="container">
+                <!-- row with responsive columns -->
+                <div class="row align-items-center">
+                    <!-- col-lg-6 means 2 columns on large screens, stacks on smaller -->
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h2 class="mb-4">About TechStart</h2>
+                        <p class="mb-3">We are a team of passionate developers and designers dedicated to creating innovative digital solutions for businesses of all sizes.</p>
+                        <p>With over 5 years of experience, we've helped hundreds of clients achieve their digital goals.</p>
+                    </div>
+                    
+                    <div class="col-lg-6">
+                        <!-- img-fluid makes image responsive -->
+                        <img src="https://picsum.photos/600/400" alt="Team working" class="img-fluid rounded">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Nakul Saini. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-rsHgTNRQsCOrWQgjPI0zymSMEf8DFsw1dqKMh8YRIVz4Ld8ZNtR5GCqvJaTz4JUB" crossorigin="anonymous"></script>
+</body>
+</html>

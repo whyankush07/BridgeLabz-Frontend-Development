@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Store - Product Catalog</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- Header section -->
+    <header class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Fashion Store</h1>
+            <p class="lead mb-0">Discover Our Latest Collection</p>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Featured Products</h2>
+            
+            <!-- Product grid using Bootstrap grid system -->
+            <!-- row creates horizontal group of columns -->
+            <div class="row g-4">
+                
+                <!-- col-12 = 1 column on mobile, col-md-6 = 2 columns on tablets, col-lg-3 = 4 columns on desktop -->
+                <div class="col-12 col-md-6 col-lg-3">
+                    <!-- card component with shadow on hover -->
+                    <div class="card h-100 shadow-sm">
+                        <!-- img-top makes image fill card width -->
+                        <img src="https://picsum.photos/300/400?random=1" class="card-img-top" alt="Casual Shirt">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Casual Shirt</h5>
+                            <p class="card-text text-muted">Comfortable cotton blend perfect for everyday wear</p>
+                            <!-- mt-auto pushes price and button to bottom -->
+                            <p class="fw-bold fs-5 mt-auto mb-3">$29.99</p>
+                            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://picsum.photos/300/400?random=2" class="card-img-top" alt="Denim Jeans">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Denim Jeans</h5>
+                            <p class="card-text text-muted">Classic fit jeans with premium denim fabric</p>
+                            <p class="fw-bold fs-5 mt-auto mb-3">$49.99</p>
+                            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://picsum.photos/300/400?random=3" class="card-img-top" alt="Summer Dress">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Summer Dress</h5>
+                            <p class="card-text text-muted">Flowy and elegant dress for warm weather</p>
+                            <p class="fw-bold fs-5 mt-auto mb-3">$39.99</p>
+                            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://picsum.photos/300/400?random=4" class="card-img-top" alt="Sport Jacket">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Sport Jacket</h5>
+                            <p class="card-text text-muted">Water-resistant jacket for active lifestyle</p>
+                            <p class="fw-bold fs-5 mt-auto mb-3">$69.99</p>
+                            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://picsum.photos/300/400?random=5" class="card-img-top" alt="Sneakers">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Running Sneakers</h5>
+                            <p class="card-text text-muted">Lightweight sneakers with superior comfort</p>
+                            <p class="fw-bold fs-5 mt-auto mb-3">$79.99</p>
+                            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://picsum.photos/300/400?random=6" class="card-img-top" alt="Leather Belt">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Leather Belt</h5>
+                            <p class="card-text text-muted">Genuine leather belt with classic buckle</p>
+                            <p class="fw-bold fs-5 mt-auto mb-3">$24.99</p>
+                            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://picsum.photos/300/400?random=7" class="card-img-top" alt="Backpack">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Travel Backpack</h5>
+                            <p class="card-text text-muted">Spacious backpack with multiple compartments</p>
+                            <p class="fw-bold fs-5 mt-auto mb-3">$54.99</p>
+                            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="card h-100 shadow-sm">
+                        <img src="https://picsum.photos/300/400?random=8" class="card-img-top" alt="Sunglasses">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Polarized Sunglasses</h5>
+                            <p class="card-text text-muted">UV protection with stylish frames</p>
+                            <p class="fw-bold fs-5 mt-auto mb-3">$34.99</p>
+                            <a href="#" class="btn btn-primary w-100">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Fashion Store. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-rsHgTNRQsCOrWQgjPI0zymSMEf8DFsw1dqKMh8YRIVz4Ld8ZNtR5GCqvJaTz4JUB" crossorigin="anonymous"></script>
+</body>
+</html>

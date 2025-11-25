@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans - Choose Your Plan</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- Custom styles for hover effects -->
+    <style>
+        /* Smooth transition for card hover effect */
+        .pricing-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        /* shadow-lg on hover for elevated appearance */
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Choose Your Plan</h1>
+            <p class="lead">Select the perfect plan for your business needs</p>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="py-5">
+        <div class="container">
+            
+            <!-- Pricing cards row -->
+            <!-- g-4 adds gap between columns -->
+            <div class="row g-4 mb-5">
+                
+                <!-- Basic Plan - col-md-4 creates 3 equal columns on medium+ screens -->
+                <div class="col-md-4">
+                    <!-- pricing-card class for hover effect, h-100 for equal height -->
+                    <div class="card pricing-card h-100 shadow">
+                        <div class="card-header bg-light text-center py-4">
+                            <h3 class="mb-0">Basic</h3>
+                        </div>
+                        <div class="card-body text-center d-flex flex-column">
+                            <!-- Price display -->
+                            <div class="mb-4">
+                                <span class="display-4 fw-bold">$9</span>
+                                <span class="text-muted">/month</span>
+                            </div>
+                            
+                            <!-- Features list -->
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3">✅ 5 Projects</li>
+                                <li class="mb-3">✅ 10 GB Storage</li>
+                                <li class="mb-3">✅ Email Support</li>
+                                <li class="mb-3">✅ Basic Analytics</li>
+                                <li class="mb-3 text-muted">❌ Priority Support</li>
+                                <li class="mb-3 text-muted">❌ Advanced Features</li>
+                            </ul>
+                            
+                            <!-- CTA button, mt-auto pushes to bottom -->
+                            <button class="btn btn-outline-primary btn-lg mt-auto">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pro Plan (Highlighted) -->
+                <div class="col-md-4">
+                    <!-- bg-primary and text-white make this plan stand out -->
+                    <div class="card pricing-card h-100 shadow-lg bg-primary text-white">
+                        <div class="card-header text-center py-4 position-relative" style="background-color: rgba(0,0,0,0.1);">
+                            <!-- Popular badge -->
+                            <span class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle">
+                                Most Popular
+                            </span>
+                            <h3 class="mb-0 mt-3">Pro</h3>
+                        </div>
+                        <div class="card-body text-center d-flex flex-column">
+                            <div class="mb-4">
+                                <span class="display-4 fw-bold">$29</span>
+                                <span class="text-white-50">/month</span>
+                            </div>
+                            
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3">✅ Unlimited Projects</li>
+                                <li class="mb-3">✅ 100 GB Storage</li>
+                                <li class="mb-3">✅ Priority Email Support</li>
+                                <li class="mb-3">✅ Advanced Analytics</li>
+                                <li class="mb-3">✅ 24/7 Priority Support</li>
+                                <li class="mb-3">✅ Team Collaboration</li>
+                            </ul>
+                            
+                            <!-- White button on primary background -->
+                            <button class="btn btn-light btn-lg mt-auto">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="col-md-4">
+                    <div class="card pricing-card h-100 shadow">
+                        <div class="card-header bg-light text-center py-4">
+                            <h3 class="mb-0">Enterprise</h3>
+                        </div>
+                        <div class="card-body text-center d-flex flex-column">
+                            <div class="mb-4">
+                                <span class="display-4 fw-bold">$99</span>
+                                <span class="text-muted">/month</span>
+                            </div>
+                            
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-3">✅ Unlimited Everything</li>
+                                <li class="mb-3">✅ 1 TB Storage</li>
+                                <li class="mb-3">✅ Dedicated Support</li>
+                                <li class="mb-3">✅ Custom Analytics</li>
+                                <li class="mb-3">✅ Advanced Security</li>
+                                <li class="mb-3">✅ API Access</li>
+                            </ul>
+                            
+                            <button class="btn btn-outline-primary btn-lg mt-auto">Contact Sales</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Additional information -->
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card bg-light border-0 shadow-sm">
+                        <div class="card-body text-center p-5">
+                            <h4 class="mb-3">Not sure which plan to choose?</h4>
+                            <p class="text-muted mb-4">All plans include a 14-day free trial. No credit card required. Cancel anytime.</p>
+                            <div class="d-flex gap-2 justify-content-center flex-wrap">
+                                <button class="btn btn-primary">Start Free Trial</button>
+                                <button class="btn btn-outline-secondary">Compare Plans</button>
+                                <button class="btn btn-outline-secondary">Contact Us</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 SaaS Platform. Flexible pricing for every need.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-rsHgTNRQsCOrWQgjPI0zymSMEf8DFsw1dqKMh8YRIVz4Ld8ZNtR5GCqvJaTz4JUB" crossorigin="anonymous"></script>
+</body>
+</html>

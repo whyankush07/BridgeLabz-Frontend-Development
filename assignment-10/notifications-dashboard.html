@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications Dashboard</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="bg-primary text-white text-center py-4">
+        <div class="container">
+            <h1 class="display-5 fw-bold">Notifications Dashboard</h1>
+            <p class="lead mb-0">Stay updated with your latest alerts</p>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="py-5">
+        <div class="container">
+            
+            <!-- Notifications card wrapper -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-dark text-white">
+                    <h2 class="h4 mb-0">Recent Notifications</h2>
+                </div>
+                <div class="card-body">
+                    
+                    <!-- Success alert - non-dismissible -->
+                    <!-- alert-success gives green background for positive messages -->
+                    <div class="alert alert-success" role="alert">
+                        <h4 class="alert-heading">✅ New Messages!</h4>
+                        <p class="mb-0">You have 3 new messages in your inbox. Click here to view them now.</p>
+                    </div>
+
+                    <!-- Info alert - dismissible -->
+                    <!-- alert-dismissible adds close button, fade and show enable smooth transitions -->
+                    <div class="alert alert-info alert-dismissible fade show" role="alert">
+                        <h4 class="alert-heading">💡 Helpful Tip</h4>
+                        <p class="mb-0">Did you know? You can customize your notification preferences in settings.</p>
+                        <!-- Close button for dismissible alert -->
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+
+                    <!-- Danger alert - non-dismissible -->
+                    <!-- alert-danger gives red background for warnings/errors -->
+                    <div class="alert alert-danger" role="alert">
+                        <h4 class="alert-heading">⚠️ Warning</h4>
+                        <p class="mb-0">Your password will expire in 3 days. Please update it to maintain account security.</p>
+                    </div>
+
+                    <!-- Warning alert - dismissible (additional example) -->
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <h4 class="alert-heading">🔔 Reminder</h4>
+                        <p class="mb-0">You have a scheduled meeting at 3:00 PM today. Don't forget to prepare!</p>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Summary well section -->
+            <!-- bg-light creates light background, border and rounded create well-like appearance -->
+            <div class="bg-light border rounded p-4 shadow-sm">
+                <h3 class="mb-3">📊 Notification Summary</h3>
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title text-success">Active</h5>
+                                <p class="display-6 fw-bold mb-0">12</p>
+                                <small class="text-muted">Unread notifications</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Total</h5>
+                                <p class="display-6 fw-bold mb-0">48</p>
+                                <small class="text-muted">This week</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger">Urgent</h5>
+                                <p class="display-6 fw-bold mb-0">3</p>
+                                <small class="text-muted">Require attention</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Additional well content -->
+                <hr class="my-4">
+                <p class="text-muted mb-3">Last updated: November 9, 2025 at 10:30 AM</p>
+                <div class="d-flex gap-2">
+                    <button class="btn btn-primary">Mark All as Read</button>
+                    <button class="btn btn-outline-secondary">Settings</button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Notifications Dashboard. Stay informed.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-rsHgTNRQsCOrWQgjPI0zymSMEf8DFsw1dqKMh8YRIVz4Ld8ZNtR5GCqvJaTz4JUB" crossorigin="anonymous"></script>
+</body>
+</html>

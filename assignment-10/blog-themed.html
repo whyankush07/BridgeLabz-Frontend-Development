@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBlog - Latest Articles</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- Custom theme using CSS variables to override Bootstrap defaults -->
+    <style>
+        /* Override Bootstrap CSS variables for custom theme */
+        :root {
+            /* Custom primary color - purple instead of blue */
+            --bs-primary: #7c3aed;
+            --bs-primary-rgb: 124, 58, 237;
+            
+            /* Custom secondary color */
+            --bs-secondary: #ec4899;
+            
+            /* Custom font family - using Google Fonts Poppins */
+            --bs-font-sans-serif: 'Poppins', system-ui, -apple-system, sans-serif;
+            
+            /* Custom border radius for modern look */
+            --bs-border-radius: 1rem;
+        }
+        
+        /* Apply custom styles to headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            color: var(--bs-primary);
+        }
+        
+        /* Custom button styling using theme color */
+        .btn-primary {
+            background-color: var(--bs-primary);
+            border-color: var(--bs-primary);
+        }
+        
+        .btn-primary:hover {
+            background-color: #6d28d9;
+            border-color: #6d28d9;
+        }
+        
+        /* Card custom styling */
+        .card {
+            border: none;
+            border-radius: var(--bs-border-radius);
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header with custom theme colors -->
+    <header class="bg-primary text-white py-5">
+        <div class="container text-center">
+            <!-- Custom font (Poppins) automatically applied via CSS variable -->
+            <h1 class="display-3 fw-bold text-white mb-2">TechBlog</h1>
+            <p class="lead text-white-50">Exploring the world of technology and innovation</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#" style="color: var(--bs-primary);">TechBlog</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Articles</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main content -->
+    <main class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Latest Articles</h2>
+            
+            <!-- Blog post cards using custom theme -->
+            <div class="row g-4">
+                
+                <!-- First blog post card -->
+                <div class="col-md-6">
+                    <!-- card component with shadow, custom border-radius applied via CSS -->
+                    <div class="card shadow-sm h-100">
+                        <!-- Card image at top -->
+                        <img src="https://picsum.photos/600/300?random=20" class="card-img-top" alt="AI Revolution">
+                        <div class="card-body d-flex flex-column">
+                            <!-- Badge using secondary theme color -->
+                            <span class="badge bg-secondary mb-2 align-self-start">Technology</span>
+                            <!-- Heading with custom theme color -->
+                            <h3 class="card-title h4">The AI Revolution in 2025</h3>
+                            <p class="card-text text-muted">Discover how artificial intelligence is transforming industries and creating new opportunities for innovation and growth in the modern world.</p>
+                            <!-- Meta information -->
+                            <p class="text-muted small mb-3">
+                                <span class="me-3">📅 Nov 5, 2025</span>
+                                <span>👤 Sarah Johnson</span>
+                            </p>
+                            <!-- Button with custom primary color, mt-auto pushes to bottom -->
+                            <a href="#" class="btn btn-primary mt-auto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second blog post card -->
+                <div class="col-md-6">
+                    <div class="card shadow-sm h-100">
+                        <img src="https://picsum.photos/600/300?random=21" class="card-img-top" alt="Web Development">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-secondary mb-2 align-self-start">Development</span>
+                            <h3 class="card-title h4">Modern Web Development Trends</h3>
+                            <p class="card-text text-muted">Explore the latest frameworks, tools, and best practices that are shaping the future of web development and user experience design.</p>
+                            <p class="text-muted small mb-3">
+                                <span class="me-3">📅 Nov 8, 2025</span>
+                                <span>👤 Mike Chen</span>
+                            </p>
+                            <a href="#" class="btn btn-primary mt-auto">Read More</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Newsletter section -->
+            <div class="row mt-5">
+                <div class="col-lg-8 mx-auto">
+                    <!-- Card with custom theme -->
+                    <div class="card shadow-sm bg-light">
+                        <div class="card-body p-5 text-center">
+                            <h3 class="mb-3">Subscribe to Our Newsletter</h3>
+                            <p class="text-muted mb-4">Get the latest tech articles delivered to your inbox weekly</p>
+                            <div class="row g-2">
+                                <div class="col-md-8">
+                                    <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+                                </div>
+                                <div class="col-md-4">
+                                    <!-- Button using custom primary theme color -->
+                                    <button class="btn btn-primary btn-lg w-100">Subscribe</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer with custom theme color -->
+    <footer class="bg-primary text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-2">Follow us on social media</p>
+            <div class="mb-3">
+                <!-- Buttons using outline style with custom colors -->
+                <a href="#" class="btn btn-outline-light btn-sm me-2">Twitter</a>
+                <a href="#" class="btn btn-outline-light btn-sm me-2">LinkedIn</a>
+                <a href="#" class="btn btn-outline-light btn-sm">GitHub</a>
+            </div>
+            <p class="mb-0">&copy; 2025 TechBlog. Powered by Bootstrap with custom theme.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-rsHgTNRQsCOrWQgjPI0zymSMEf8DFsw1dqKMh8YRIVz4Ld8ZNtR5GCqvJaTz4JUB" crossorigin="anonymous"></script>
+</body>
+</html>

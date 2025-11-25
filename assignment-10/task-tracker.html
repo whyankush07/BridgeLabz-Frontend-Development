@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- Header with badge counter -->
+    <header class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h1 class="display-5 fw-bold mb-2">Task Tracker</h1>
+                    <p class="lead mb-0">Manage your daily tasks efficiently</p>
+                </div>
+                <div class="text-end">
+                    <!-- Badge counter showing total pending tasks -->
+                    <!-- badge creates small labeled UI element, bg-danger for red color -->
+                    <h3 class="mb-0">
+                        Pending Tasks 
+                        <span class="badge bg-danger rounded-pill">7</span>
+                    </h3>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="py-5">
+        <div class="container">
+            
+            <div class="row">
+                <!-- Tasks list section -->
+                <div class="col-lg-8">
+                    <div class="card shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h4 mb-0">Active Tasks</h2>
+                        </div>
+                        <div class="card-body p-0">
+                            
+                            <!-- list-group creates vertical list of items -->
+                            <ul class="list-group list-group-flush">
+                                
+                                <!-- Each list item with priority badge -->
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-1">Complete project documentation</h5>
+                                        <small class="text-muted">Due: Nov 10, 2025</small>
+                                    </div>
+                                    <!-- badge bg-danger for high priority (red) -->
+                                    <span class="badge bg-danger rounded-pill">High</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-1">Review pull requests</h5>
+                                        <small class="text-muted">Due: Nov 9, 2025</small>
+                                    </div>
+                                    <span class="badge bg-danger rounded-pill">High</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-1">Update client website</h5>
+                                        <small class="text-muted">Due: Nov 12, 2025</small>
+                                    </div>
+                                    <!-- badge bg-warning for medium priority (yellow) -->
+                                    <span class="badge bg-warning text-dark rounded-pill">Medium</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-1">Respond to team emails</h5>
+                                        <small class="text-muted">Due: Nov 11, 2025</small>
+                                    </div>
+                                    <span class="badge bg-warning text-dark rounded-pill">Medium</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-1">Backup project files</h5>
+                                        <small class="text-muted">Due: Nov 15, 2025</small>
+                                    </div>
+                                    <!-- badge bg-secondary for low priority (gray) -->
+                                    <span class="badge bg-secondary rounded-pill">Low</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-1">Organize workspace</h5>
+                                        <small class="text-muted">Due: Nov 20, 2025</small>
+                                    </div>
+                                    <span class="badge bg-secondary rounded-pill">Low</span>
+                                </li>
+
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="mb-1">Read tech articles</h5>
+                                        <small class="text-muted">Due: Nov 18, 2025</small>
+                                    </div>
+                                    <span class="badge bg-secondary rounded-pill">Low</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar with stats and actions -->
+                <div class="col-lg-4 mt-4 mt-lg-0">
+                    
+                    <!-- Task statistics -->
+                    <div class="card shadow-sm mb-4">
+                        <div class="card-header bg-success text-white">
+                            <h3 class="h5 mb-0">Task Statistics</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Total Tasks:</span>
+                                <span class="badge bg-primary rounded-pill">15</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Completed:</span>
+                                <span class="badge bg-success rounded-pill">8</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Pending:</span>
+                                <span class="badge bg-danger rounded-pill">7</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between">
+                                <span>Progress:</span>
+                                <span class="fw-bold">53%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action buttons with embedded badges -->
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <h3 class="h5 mb-3">Quick Actions</h3>
+                            
+                            <!-- Button with embedded badge showing count -->
+                            <!-- position-relative allows badge positioning -->
+                            <button class="btn btn-primary w-100 mb-3 position-relative">
+                                Add New Task
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    +
+                                </span>
+                            </button>
+
+                            <!-- Completed button with badge -->
+                            <button class="btn btn-success w-100 mb-3">
+                                View Completed 
+                                <span class="badge bg-light text-dark ms-2">8</span>
+                            </button>
+
+                            <button class="btn btn-outline-secondary w-100 mb-3">
+                                Filter by Priority
+                            </button>
+
+                            <button class="btn btn-outline-danger w-100">
+                                Clear All Tasks
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 Task Tracker. Stay productive.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-rsHgTNRQsCOrWQgjPI0zymSMEf8DFsw1dqKMh8YRIVz4Ld8ZNtR5GCqvJaTz4JUB" crossorigin="anonymous"></script>
+</body>
+</html>

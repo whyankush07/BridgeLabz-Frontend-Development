@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gourmet Kitchen - Today's Menu</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="bg-success text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">The Gourmet Kitchen</h1>
+            <!-- lead class for larger, lighter text -->
+            <p class="lead">Fresh ingredients, crafted with passion</p>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="py-5">
+        <div class="container">
+            
+            <!-- Hero image with caption -->
+            <div class="text-center mb-5">
+                <h2 class="mb-4">Today's Menu</h2>
+                <!-- img-fluid makes image responsive, rounded adds border-radius -->
+                <img src="https://picsum.photos/800/400?random=10" alt="Signature Dishes" class="img-fluid rounded shadow-sm mb-3">
+                <!-- figure-caption for image description -->
+                <p class="text-muted fst-italic">Our chef's signature creations, prepared fresh daily</p>
+            </div>
+
+            <!-- Row with two columns for menu and specials -->
+            <div class="row g-4">
+                
+                <!-- Menu table section -->
+                <div class="col-lg-8">
+                    <h3 class="mb-4">Full Menu</h3>
+                    
+                    <!-- Bootstrap table with striped rows and hover effect -->
+                    <!-- table-striped adds zebra-striping, table-hover adds hover state -->
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <thead class="table-success">
+                                <tr>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Item</th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col" class="text-end">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold">Appetizers</td>
+                                    <td>Caesar Salad</td>
+                                    <td>Crisp romaine with parmesan</td>
+                                    <td class="text-end">$8.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Appetizers</td>
+                                    <td>Bruschetta</td>
+                                    <td>Toasted bread with tomatoes</td>
+                                    <td class="text-end">$7.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Main Course</td>
+                                    <td>Grilled Salmon</td>
+                                    <td>Atlantic salmon with vegetables</td>
+                                    <td class="text-end">$24.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Main Course</td>
+                                    <td>Beef Tenderloin</td>
+                                    <td>Prime cut with mashed potatoes</td>
+                                    <td class="text-end">$29.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Main Course</td>
+                                    <td>Mushroom Risotto</td>
+                                    <td>Creamy arborio rice with truffle</td>
+                                    <td class="text-end">$18.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Pasta</td>
+                                    <td>Fettuccine Alfredo</td>
+                                    <td>Classic cream sauce with parmesan</td>
+                                    <td class="text-end">$16.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Pasta</td>
+                                    <td>Spaghetti Carbonara</td>
+                                    <td>Bacon, egg, and cheese sauce</td>
+                                    <td class="text-end">$15.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Desserts</td>
+                                    <td>Tiramisu</td>
+                                    <td>Coffee-flavored Italian dessert</td>
+                                    <td class="text-end">$7.99</td>
+                                </tr>
+                                <tr>
+                                    <td class="fw-bold">Desserts</td>
+                                    <td>Chocolate Lava Cake</td>
+                                    <td>Warm cake with molten center</td>
+                                    <td class="text-end">$8.99</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Chef's Specials using list group -->
+                <div class="col-lg-4">
+                    <h3 class="mb-4">Chef's Specials</h3>
+                    
+                    <!-- list-group creates a list of items with Bootstrap styling -->
+                    <!-- list-group-flush removes borders for seamless look -->
+                    <div class="list-group">
+                        <!-- list-group-item-action adds hover/active states -->
+                        <div class="list-group-item list-group-item-action active">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Today's Special</h5>
+                                <small class="text-white">New</small>
+                            </div>
+                            <p class="mb-1">Pan-Seared Duck Breast</p>
+                            <small class="text-white">With cherry reduction - $32.99</small>
+                        </div>
+                        
+                        <div class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Weekend Special</h5>
+                                <small>Popular</small>
+                            </div>
+                            <p class="mb-1">Lobster Thermidor</p>
+                            <small>Classic French preparation - $45.99</small>
+                        </div>
+                        
+                        <div class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Vegetarian Delight</h5>
+                                <small>Healthy</small>
+                            </div>
+                            <p class="mb-1">Stuffed Bell Peppers</p>
+                            <small>Quinoa and vegetable medley - $14.99</small>
+                        </div>
+                        
+                        <div class="list-group-item list-group-item-action">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h5 class="mb-1">Dessert Special</h5>
+                                <small>Sweet</small>
+                            </div>
+                            <p class="mb-1">Crème Brûlée</p>
+                            <small>Vanilla bean custard - $9.99</small>
+                        </div>
+                    </div>
+
+                    <!-- Additional info card -->
+                    <div class="card mt-4 border-success">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Reservations</h5>
+                            <p class="card-text">Book your table for an unforgettable dining experience.</p>
+                            <a href="#" class="btn btn-success w-100">Reserve Now</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2025 The Gourmet Kitchen. Open Daily 11am - 10pm</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-rsHgTNRQsCOrWQgjPI0zymSMEf8DFsw1dqKMh8YRIVz4Ld8ZNtR5GCqvJaTz4JUB" crossorigin="anonymous"></script>
+</body>
+</html>
