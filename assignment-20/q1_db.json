@@ -1,0 +1,46 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Wireless Bluetooth Headphones",
+            "price": 2499,
+            "image": "https://picsum.photos/seed/headphones/100/100",
+            "category": "electronics"
+        },
+        {
+            "id": 2,
+            "name": "Smart Watch Pro",
+            "price": 4999,
+            "image": "https://picsum.photos/seed/watch/100/100",
+            "category": "electronics"
+        },
+        {
+            "id": 3,
+            "name": "Laptop Stand Aluminum",
+            "price": 899,
+            "image": "https://picsum.photos/seed/stand/100/100",
+            "category": "accessories"
+        },
+        {
+            "id": 4,
+            "name": "USB-C Hub 7-in-1",
+            "price": 1299,
+            "image": "https://picsum.photos/seed/hub/100/100",
+            "category": "accessories"
+        },
+        {
+            "id": 5,
+            "name": "Mechanical Keyboard RGB",
+            "price": 3499,
+            "image": "https://picsum.photos/seed/keyboard/100/100",
+            "category": "electronics"
+        },
+        {
+            "id": 6,
+            "name": "Wireless Mouse Ergonomic",
+            "price": 799,
+            "image": "https://picsum.photos/seed/mouse/100/100",
+            "category": "accessories"
+        }
+    ]
+}

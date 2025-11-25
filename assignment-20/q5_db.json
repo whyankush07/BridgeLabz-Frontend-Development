@@ -1,0 +1,74 @@
+{
+    "timetable": [
+        {
+            "id": 1,
+            "day": "Monday",
+            "subject": "Data Structures",
+            "faculty": "Dr. Rajesh Kumar",
+            "time": "09:00 AM - 10:00 AM"
+        },
+        {
+            "id": 2,
+            "day": "Monday",
+            "subject": "Web Development",
+            "faculty": "Prof. Priya Sharma",
+            "time": "10:00 AM - 11:00 AM"
+        },
+        {
+            "id": 3,
+            "day": "Monday",
+            "subject": "Database Systems",
+            "faculty": "Dr. Amit Patel",
+            "time": "11:30 AM - 12:30 PM"
+        },
+        {
+            "id": 4,
+            "day": "Tuesday",
+            "subject": "Operating Systems",
+            "faculty": "Dr. Sneha Gupta",
+            "time": "09:00 AM - 10:00 AM"
+        },
+        {
+            "id": 5,
+            "day": "Tuesday",
+            "subject": "Computer Networks",
+            "faculty": "Prof. Vikram Singh",
+            "time": "10:00 AM - 11:00 AM"
+        },
+        {
+            "id": 6,
+            "day": "Wednesday",
+            "subject": "Software Engineering",
+            "faculty": "Dr. Kavya Nair",
+            "time": "09:00 AM - 10:00 AM"
+        },
+        {
+            "id": 7,
+            "day": "Wednesday",
+            "subject": "Data Structures",
+            "faculty": "Dr. Rajesh Kumar",
+            "time": "11:30 AM - 12:30 PM"
+        },
+        {
+            "id": 8,
+            "day": "Thursday",
+            "subject": "Web Development",
+            "faculty": "Prof. Priya Sharma",
+            "time": "09:00 AM - 10:00 AM"
+        },
+        {
+            "id": 9,
+            "day": "Thursday",
+            "subject": "Machine Learning",
+            "faculty": "Dr. Suresh Reddy",
+            "time": "02:00 PM - 03:00 PM"
+        },
+        {
+            "id": 10,
+            "day": "Friday",
+            "subject": "Project Work",
+            "faculty": "Prof. Anita Desai",
+            "time": "10:00 AM - 12:00 PM"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+{
+    "employees": [
+        {
+            "id": "1",
+            "name": "Rajesh Kumar",
+            "department": "Engineering",
+            "status": "active"
+        },
+        {
+            "id": "2",
+            "name": "Priya Sharma",
+            "department": "Marketing",
+            "status": "active"
+        },
+        {
+            "id": "3",
+            "name": "Amit Patel",
+            "department": "Engineering",
+            "status": "inactive"
+        },
+        {
+            "id": "4",
+            "name": "Sneha Gupta",
+            "department": "HR",
+            "status": "active"
+        },
+        {
+            "id": "5",
+            "name": "Vikram Singh",
+            "department": "Sales",
+            "status": "inactive"
+        },
+        {
+            "id": "6",
+            "name": "Kavya Nair",
+            "department": "Design",
+            "status": "active"
+        }
+    ]
+}

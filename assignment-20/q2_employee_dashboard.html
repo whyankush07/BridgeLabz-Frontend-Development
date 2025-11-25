@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Status Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .dashboard {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+        }
+
+        tr:hover {
+            background: #f8f8f8;
+        }
+
+        .toggle-btn {
+            padding: 8px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .toggle-btn.active {
+            background: #28a745;
+            color: white;
+        }
+
+        .toggle-btn.inactive {
+            background: #dc3545;
+            color: white;
+        }
+
+        .status-badge {
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .status-badge.active {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-badge.inactive {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px;
+            display: none;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Employee Status Dashboard</h1>
+
+    <div class="error-message" id="errorMessage"></div>
+
+    <div class="dashboard">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="employeeTable">
+                <tr>
+                    <td colspan="5" class="loading">Loading employees...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="q2_employee_dashboard.js"></script>
+</body>
+
+</html>

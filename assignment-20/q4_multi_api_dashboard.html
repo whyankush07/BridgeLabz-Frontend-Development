@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-API Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .warning {
+      background: #fff3cd;
+      color: #856404;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      display: none;
+      text-align: center;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .card-title {
+      color: #666;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .card-value {
+      font-size: 3em;
+      font-weight: bold;
+      color: #667eea;
+    }
+
+    .card-icon {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .skeleton {
+      background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.5s infinite;
+      border-radius: 4px;
+    }
+
+    .skeleton-value {
+      height: 60px;
+      width: 100px;
+      margin: 0 auto;
+    }
+
+    @keyframes shimmer {
+      0% { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
+    }
+
+    .card.error {
+      opacity: 0.6;
+    }
+
+    .card.error .card-value {
+      color: #dc3545;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Dashboard Overview</h1>
+
+  <div class="warning" id="warning">Some data could not be loaded.</div>
+
+  <div class="dashboard">
+    <div class="card" id="usersCard">
+      <div class="card-icon">👤</div>
+      <div class="card-title">Total Users</div>
+      <div class="card-value" id="usersCount">
+        <div class="skeleton skeleton-value"></div>
+      </div>
+    </div>
+
+    <div class="card" id="ordersCard">
+      <div class="card-icon">📦</div>
+      <div class="card-title">Total Orders</div>
+      <div class="card-value" id="ordersCount">
+        <div class="skeleton skeleton-value"></div>
+      </div>
+    </div>
+
+    <div class="card" id="productsCard">
+      <div class="card-icon">🛍️</div>
+      <div class="card-title">Total Products</div>
+      <div class="card-value" id="productsCount">
+        <div class="skeleton skeleton-value"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="q4_multi_api_dashboard.js"></script>
+</body>
+</html>

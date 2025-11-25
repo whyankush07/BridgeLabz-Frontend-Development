@@ -1,0 +1,52 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Rajesh Kumar",
+            "email": "rajesh@example.com",
+            "password": "pass123"
+        },
+        {
+            "id": 2,
+            "name": "Priya Sharma",
+            "email": "priya@example.com",
+            "password": "pass456"
+        },
+        {
+            "id": 3,
+            "name": "Amit Patel",
+            "email": "amit@example.com",
+            "password": "pass789"
+        },
+        {
+            "id": 4,
+            "name": "Sneha Gupta",
+            "email": "sneha@example.com",
+            "password": "pass101"
+        },
+        {
+            "id": 5,
+            "name": "Vikram Singh",
+            "email": "vikram@example.com",
+            "password": "pass102"
+        },
+        {
+            "id": "24b9",
+            "name": "Kirito",
+            "email": "admin@sgms.com",
+            "password": "admin123"
+        },
+        {
+            "id": "831c",
+            "name": "Kirito",
+            "email": "user@sgms.com",
+            "password": "user123"
+        },
+        {
+            "id": "d632",
+            "name": "sds",
+            "email": "riya@example.com",
+            "password": "wds ,s ,.c"
+        }
+    ]
+}

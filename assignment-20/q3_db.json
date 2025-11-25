@@ -1,0 +1,40 @@
+{
+    "tasks": [
+        {
+            "id": "1",
+            "title": "Complete project documentation",
+            "priority": "high",
+            "completed": false
+        },
+        {
+            "id": "2",
+            "title": "Review pull requests",
+            "priority": "medium",
+            "completed": false
+        },
+        {
+            "id": "3",
+            "title": "Update dependencies",
+            "priority": "low",
+            "completed": false
+        },
+        {
+            "id": "4",
+            "title": "Fix login bug",
+            "priority": "high",
+            "completed": true
+        },
+        {
+            "id": "5",
+            "title": "Write unit tests",
+            "priority": "medium",
+            "completed": true
+        },
+        {
+            "id": "6",
+            "title": "Refactor database queries",
+            "priority": "low",
+            "completed": false
+        }
+    ]
+}
