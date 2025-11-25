@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Blog Container - Grid Layout */
+.blog-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    grid-area: header;
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar Styles */
+.sidebar {
+    grid-area: sidebar;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar h2 {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 12px 15px;
+    display: block;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.sidebar ul li a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: translateX(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content Styles */
+.main-content {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Blog Post Styles */
+.blog-post {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    border-top: 5px solid #d63031;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(214, 48, 49, 0.3);
+}
+
+.blog-post h2 {
+    color: #d63031;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.post-meta {
+    color: #6c5ce7;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.blog-post p {
+    color: #2d3436;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: #d63031;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.read-more:hover {
+    color: #e17055;
+    transform: translateX(5px);
+}
+
+/* Footer Styles */
+footer {
+    grid-area: footer;
+    background: linear-gradient(135deg, #a29bfe 0%, #6c5ce7 100%);
+    padding: 25px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    text-align: center;
+    color: white;
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.footer-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design - Below 800px */
+@media (max-width: 800px) {
+    .blog-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+        gap: 20px;
+    }
+
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile Design - Below 600px */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+
+    .sidebar {
+        padding: 20px;
+    }
+
+    .blog-post {
+        padding: 20px;
+    }
+
+    .blog-post h2 {
+        font-size: 20px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+
+    .footer-content p {
+        font-size: 14px;
+    }
+}

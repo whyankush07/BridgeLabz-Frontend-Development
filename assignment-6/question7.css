@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Loader Container - Centered with Flexbox */
+.loader-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Loader - Contains three circles */
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Circle Styles */
+.circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    animation: bounce 1.2s ease-in-out infinite;
+}
+
+/* Different colors for each circle */
+.circle1 {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    box-shadow: 0 4px 15px rgba(240, 147, 251, 0.5);
+    animation-delay: 0s;
+}
+
+.circle2 {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    box-shadow: 0 4px 15px rgba(79, 172, 254, 0.5);
+    animation-delay: 0.2s;
+}
+
+.circle3 {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    box-shadow: 0 4px 15px rgba(67, 233, 123, 0.5);
+    animation-delay: 0.4s;
+}
+
+/* Bounce Animation using translateY */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-40px);
+    }
+}
+
+/* Loading Text */
+.loading-text {
+    color: white;
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Pulse Animation for Text */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .circle {
+        width: 20px;
+        height: 20px;
+    }
+
+    .loader {
+        gap: 15px;
+    }
+
+    .loading-text {
+        font-size: 20px;
+    }
+}

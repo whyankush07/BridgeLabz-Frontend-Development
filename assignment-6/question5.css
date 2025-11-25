@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* Pricing Section */
+.pricing-section {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.pricing-section h1 {
+    text-align: center;
+    color: white;
+    font-size: 42px;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Pricing Container - Flexbox */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pricing Card Styles */
+.pricing-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4ff 100%);
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    flex: 1;
+    max-width: 320px;
+    transition: all 0.4s ease;
+    position: relative;
+    animation: fadeIn 0.8s ease-out;
+}
+
+.pricing-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.pricing-card:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.pricing-card:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Featured Card (Middle) */
+.pricing-card.featured {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    transform: scale(1.1);
+    border: 3px solid #ffffff;
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.1) translateY(-10px);
+}
+
+.pricing-card.featured h2,
+.pricing-card.featured .price,
+.pricing-card.featured .features li {
+    color: white;
+}
+
+.pricing-card.featured button {
+    background: white;
+    color: #4facfe;
+}
+
+.pricing-card.featured button:hover {
+    background: #764ba2;
+    color: white;
+}
+
+/* Badge */
+.badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content */
+.pricing-card h2 {
+    color: #667eea;
+    font-size: 28px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.price {
+    margin-bottom: 30px;
+}
+
+.currency {
+    font-size: 24px;
+    color: #667eea;
+    vertical-align: top;
+}
+
+.amount {
+    font-size: 48px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.period {
+    font-size: 16px;
+    color: #4a5568;
+}
+
+.pricing-card.featured .currency,
+.pricing-card.featured .amount {
+    color: white;
+}
+
+.pricing-card.featured .period {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Features List */
+.features {
+    list-style: none;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.features li {
+    padding: 12px 0;
+    color: #4a5568;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 16px;
+}
+
+.features li:last-child {
+    border-bottom: none;
+}
+
+.features li::before {
+    content: "✓";
+    color: #4facfe;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.pricing-card.featured .features li::before {
+    color: white;
+}
+
+/* Button */
+button {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+/* Responsive Design - Below 750px */
+@media (max-width: 750px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .pricing-card.featured {
+        transform: scale(1);
+    }
+
+    .pricing-card.featured:hover {
+        transform: translateY(-10px);
+    }
+
+    .pricing-section h1 {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing-section h1 {
+        font-size: 28px;
+    }
+
+    .pricing-card {
+        padding: 30px 20px;
+    }
+
+    .amount {
+        font-size: 40px;
+    }
+}
