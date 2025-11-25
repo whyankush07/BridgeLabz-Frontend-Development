@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Responsive Design Principles</title>
+  <link rel="stylesheet" href="responsive-principles-summary.css">
+</head>
+
+<body>
+  <main class="principles">
+    <h1>Responsive Design Principles</h1>
+    <section class="grid">
+      <article class="card">
+        <h2>Fluid Layouts</h2>
+        <p>Layouts that resize smoothly using relative units.</p>
+        <pre>container { width: 100%; max-width: 1200px; }</pre>
+      </article>
+      <article class="card">
+        <h2>Flexible Media</h2>
+        <p>Images and videos adapt to container size.</p>
+        <pre>img { max-width:100%; height:auto; }</pre>
+      </article>
+      <article class="card">
+        <h2>Breakpoints</h2>
+        <p>Use media queries to alter layouts at specific widths.</p>
+        <pre>@media (max-width:600px) { ... }</pre>
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>

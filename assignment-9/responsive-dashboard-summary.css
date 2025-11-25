@@ -1,0 +1,99 @@
+/* Responsive Dashboard Summary */
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+  margin: 0;
+  background: #f6f8fb;
+  color: #222
+}
+
+.dashboard {
+  display: grid;
+  grid-template-areas: 'header header' 'sidebar main' 'footer footer';
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: auto 1fr auto;
+  gap: 12px;
+  min-height: 100vh
+}
+
+.dash-header {
+  grid-area: header;
+  background: #fff;
+  padding: 14px;
+  border-bottom: 1px solid #e6e9f0;
+  font-weight: 700
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background: #fff;
+  padding: 12px;
+  border-right: 1px solid #e6e9f0
+}
+
+.sidebar a {
+  display: block;
+  padding: 8px 0;
+  color: #234;
+  text-decoration: none
+}
+
+.main {
+  grid-area: main;
+  padding: 16px
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px
+}
+
+.card {
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #eef2f8;
+  transition: transform .25s ease, box-shadow .25s ease;
+  animation: popIn .45s ease both
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(10, 20, 40, 0.06)
+}
+
+.dash-footer {
+  grid-area: footer;
+  background: #fff;
+  padding: 12px;
+  text-align: center;
+  border-top: 1px solid #e6e9f0
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+/* Below 750px: sidebar moves to top and content stacks below */
+@media (max-width:750px) {
+  .dashboard {
+    grid-template-areas: 'header' 'sidebar' 'main' 'footer';
+    grid-template-columns: 1fr
+  }
+
+  .cards {
+    grid-template-columns: 1fr
+  }
+}

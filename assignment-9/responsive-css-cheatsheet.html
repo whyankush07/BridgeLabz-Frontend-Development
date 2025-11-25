@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Responsive CSS Cheat Sheet</title>
+  <link rel="stylesheet" href="responsive-css-cheatsheet.css">
+</head>
+
+<body>
+  <main class="cheatsheet">
+    <h1>Responsive CSS Cheat Sheet</h1>
+    <section class="grid">
+      <article class="box">
+        <h2>Filters</h2>
+        <p>filter: grayscale(100%); /* try blur(), sepia(), hue-rotate() */</p>
+      </article>
+      <article class="box">
+        <h2>Media Queries</h2>
+        <p>@media (max-width: 700px) { /* responsive rules */ }</p>
+      </article>
+      <article class="box">
+        <h2>Responsive Design</h2>
+        <p>Use fluid layouts, relative units and CSS Grid / Flexbox to adapt.</p>
+      </article>
+      <article class="box">
+        <h2>Typography</h2>
+        <p>h1 { font-size: clamp(1.5rem, 4vw, 3rem); }</p>
+      </article>
+      <article class="box">
+        <h2>Grid</h2>
+        <p>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</p>
+      </article>
+      <article class="box">
+        <h2>Flexbox</h2>
+        <p>display:flex; align-items:center; justify-content:space-between;</p>
+      </article>
+    </section>
+  </main>
+</body>
+
+</html>

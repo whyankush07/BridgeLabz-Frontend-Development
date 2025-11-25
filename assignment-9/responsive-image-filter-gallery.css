@@ -1,0 +1,104 @@
+/* Responsive Image Filter Gallery */
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  line-height: 1.4;
+  color: #222;
+  margin: 0;
+  padding: 24px;
+  background: #fafafa
+}
+
+header {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+  text-align: center
+}
+
+.lead {
+  color: #555;
+  margin-top: 6px
+}
+
+.gallery {
+  display: grid;
+  gap: 14px;
+  max-width: 1100px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
+}
+
+.gallery figure {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e6e6e6;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column
+}
+
+.gallery img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: filter .45s ease, transform .35s ease
+}
+
+.gallery figcaption {
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  color: #333;
+  background: #fff
+}
+
+/* apply different filters to each image */
+.gallery figure:nth-child(1) img {
+  filter: blur(2px)
+}
+
+.gallery figure:nth-child(2) img {
+  filter: grayscale(100%)
+}
+
+.gallery figure:nth-child(3) img {
+  filter: sepia(70%)
+}
+
+.gallery figure:nth-child(4) img {
+  filter: brightness(0.7)
+}
+
+.gallery figure:nth-child(5) img {
+  filter: contrast(1.4)
+}
+
+.gallery figure:nth-child(6) img {
+  filter: hue-rotate(90deg)
+}
+
+/* remove filter on hover with smooth transition */
+.gallery figure:hover img {
+  filter: none;
+  transform: scale(1.02)
+}
+
+/* stack to a single column on narrow screens */
+@media (max-width:600px) {
+  body {
+    padding: 16px
+  }
+
+  .gallery img {
+    height: 180px
+  }
+
+  .gallery {
+    grid-template-columns: 1fr
+  }
+}

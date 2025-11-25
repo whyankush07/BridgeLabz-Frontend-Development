@@ -1,0 +1,109 @@
+/* Combined Responsive Web Demo */
+* {
+  box-sizing: border-box
+}
+
+body {
+  font-family: system-ui, Segoe UI, Roboto, Arial;
+  margin: 0;
+  color: #222;
+  background: #fbfcfd
+}
+
+.wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid #e8eef6
+}
+
+.brand {
+  font-weight: 700
+}
+
+.nav a {
+  margin-left: 16px;
+  color: #234;
+  text-decoration: none
+}
+
+.layout {
+  max-width: 1100px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+  padding: 0 16px;
+  align-items: start
+}
+
+.panel {
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #e9eef6;
+  animation: fadeIn .5s ease both
+}
+
+.gallery .images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px
+}
+
+.gallery img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  transition: transform .3s ease
+}
+
+.gallery img:hover {
+  transform: scale(1.03)
+}
+
+.about p {
+  margin: 0;
+  color: #444
+}
+
+.cheat ul {
+  margin: 0;
+  padding-left: 18px
+}
+
+.site-footer {
+  text-align: center;
+  padding: 18px;
+  color: #666
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+
+/* On small screens stack all sections vertically */
+@media (max-width:700px) {
+  .layout {
+    grid-template-columns: 1fr
+  }
+
+  .gallery .images {
+    grid-template-columns: repeat(2, 1fr)
+  }
+}
