@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3: Multi-Step Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .step {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            position: relative;
+            z-index: 1;
+        }
+
+        .step.active {
+            background: #007bff;
+            color: white;
+        }
+
+        .step.completed {
+            background: #28a745;
+            color: white;
+        }
+
+        .form-step {
+            display: none;
+        }
+
+        .form-step.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input.invalid {
+            border-color: #dc3545;
+        }
+
+        .error-message {
+            color: #dc3545;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .back-btn {
+            background: #6c757d;
+            color: white;
+        }
+
+        .back-btn:hover {
+            background: #5a6268;
+        }
+
+        .next-btn {
+            background: #007bff;
+            color: white;
+        }
+
+        .next-btn:hover {
+            background: #0056b3;
+        }
+
+        .summary {
+            display: none;
+            background: #d4edda;
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid #c3e6cb;
+        }
+
+        .summary.show {
+            display: block;
+        }
+
+        .summary h2 {
+            color: #155724;
+            margin-bottom: 15px;
+        }
+
+        .summary-item {
+            margin-bottom: 10px;
+        }
+
+        .summary-item strong {
+            color: #155724;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Multi-Step Form</h1>
+
+    <div class="container">
+        <div class="progress-bar">
+            <div class="step active" id="step1">1</div>
+            <div class="step" id="step2">2</div>
+            <div class="step" id="step3">3</div>
+        </div>
+
+        <form id="multiStepForm">
+            <div class="form-step active" data-step="1">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+                    <div class="error-message" id="nameError">Name is required</div>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="2">
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email">
+                    <div class="error-message" id="emailError">Please enter a valid email</div>
+                </div>
+            </div>
+
+            <div class="form-step" data-step="3">
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <div class="error-message" id="passwordError">Password must be at least 6 characters</div>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button type="button" class="back-btn" id="backBtn" style="visibility: hidden;">Back</button>
+                <button type="button" class="next-btn" id="nextBtn">Next</button>
+            </div>
+        </form>
+
+        <div class="summary" id="summary">
+            <h2>Form Summary</h2>
+            <div class="summary-item"><strong>Name:</strong> <span id="summaryName"></span></div>
+            <div class="summary-item"><strong>Email:</strong> <span id="summaryEmail"></span></div>
+            <div class="summary-item"><strong>Password:</strong> <span id="summaryPassword"></span></div>
+        </div>
+    </div>
+
+    <script src="q3_multi_step_form.js"></script>
+</body>
+
+</html>

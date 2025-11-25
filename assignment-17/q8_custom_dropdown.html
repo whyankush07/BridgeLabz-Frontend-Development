@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8: Custom Dropdown</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 50px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .dropdown {
+            position: relative;
+            width: 100%;
+        }
+
+        .dropdown-button {
+            width: 100%;
+            padding: 12px 15px;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .dropdown-button:hover {
+            border-color: #007bff;
+        }
+
+        .dropdown-button.active {
+            border-color: #007bff;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .dropdown-button.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            border: 2px solid #007bff;
+            border-top: none;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s;
+            z-index: 10;
+        }
+
+        .dropdown-options.show {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .dropdown-option {
+            padding: 12px 15px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+        }
+
+        .dropdown-option:hover {
+            background-color: #f8f9fa;
+        }
+
+        .dropdown-option:active {
+            background-color: #e9ecef;
+        }
+
+        .selected-value {
+            margin-top: 30px;
+            padding: 15px;
+            background: white;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .selected-value strong {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Custom Dropdown</h1>
+
+    <div class="container">
+        <div class="dropdown" id="dropdown">
+            <div class="dropdown-button" id="dropdownButton">
+                <span id="selectedText">Select a fruit</span>
+                <span class="arrow">&darr;</span>
+            </div>
+            <div class="dropdown-options" id="dropdownOptions">
+                <div class="dropdown-option" data-value="apple">Apple</div>
+                <div class="dropdown-option" data-value="banana">Banana</div>
+                <div class="dropdown-option" data-value="orange">Orange</div>
+                <div class="dropdown-option" data-value="mango">Mango</div>
+                <div class="dropdown-option" data-value="grapes">Grapes</div>
+                <div class="dropdown-option" data-value="strawberry">Strawberry</div>
+            </div>
+        </div>
+
+        <div class="selected-value">
+            <strong>Selected:</strong> <span id="displayValue">None</span>
+        </div>
+    </div>
+
+    <script src="q8_custom_dropdown.js"></script>
+</body>
+
+</html>

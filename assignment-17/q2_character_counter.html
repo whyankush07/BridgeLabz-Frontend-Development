@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2: Character Counter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #textArea {
+            width: 100%;
+            min-height: 150px;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            resize: vertical;
+        }
+
+        .counter-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        #charCounter {
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        #charCounter.normal {
+            color: #333;
+        }
+
+        #charCounter.warning {
+            color: #ffc107;
+        }
+
+        #charCounter.danger {
+            color: #dc3545;
+        }
+
+        #resetBtn {
+            padding: 8px 16px;
+            background: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        #resetBtn:hover {
+            background: #5a6268;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Live Character Counter</h1>
+
+    <div class="container">
+        <textarea id="textArea" placeholder="Start typing... (Max 100 characters)"></textarea>
+
+        <div class="counter-section">
+            <span id="charCounter" class="normal">100 characters remaining</span>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </div>
+
+    <script src="q2_character_counter.js"></script>
+</body>
+
+</html>

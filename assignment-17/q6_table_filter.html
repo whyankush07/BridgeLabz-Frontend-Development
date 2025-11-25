@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6: Table Filter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .search-box {
+            margin-bottom: 20px;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        #searchInput:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        thead {
+            background: #007bff;
+            color: white;
+        }
+
+        th {
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        tbody tr {
+            transition: background-color 0.2s;
+        }
+
+        tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        tbody tr.hidden {
+            display: none;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 30px;
+            color: #999;
+            display: none;
+        }
+
+        .no-results.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Table Filter</h1>
+
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Search by name, branch, or CGPA...">
+        </div>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Branch</th>
+                    <th>CGPA</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody">
+                <tr>
+                    <td>Rahul Kumar</td>
+                    <td>Computer Science</td>
+                    <td>8.5</td>
+                </tr>
+                <tr>
+                    <td>Priya Sharma</td>
+                    <td>Electronics</td>
+                    <td>9.2</td>
+                </tr>
+                <tr>
+                    <td>Amit Patel</td>
+                    <td>Mechanical</td>
+                    <td>7.8</td>
+                </tr>
+                <tr>
+                    <td>Sneha Reddy</td>
+                    <td>Computer Science</td>
+                    <td>8.9</td>
+                </tr>
+                <tr>
+                    <td>Vikram Singh</td>
+                    <td>Civil</td>
+                    <td>7.5</td>
+                </tr>
+                <tr>
+                    <td>Ananya Gupta</td>
+                    <td>Electronics</td>
+                    <td>9.0</td>
+                </tr>
+                <tr>
+                    <td>Karan Verma</td>
+                    <td>Computer Science</td>
+                    <td>8.2</td>
+                </tr>
+                <tr>
+                    <td>Neha Joshi</td>
+                    <td>Mechanical</td>
+                    <td>8.7</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="no-results" id="noResults">
+            No results found
+        </div>
+    </div>
+
+    <script src="q6_table_filter.js"></script>
+</body>
+
+</html>

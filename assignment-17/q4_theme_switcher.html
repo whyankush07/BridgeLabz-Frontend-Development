@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4: Theme Switcher</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            min-height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.light {
+            background-color: #ffffff;
+            color: #333333;
+        }
+
+        body.dark {
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+
+        body.blue {
+            background-color: #1e3a5f;
+            color: #e0e7ff;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .theme-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .theme-btn {
+            padding: 12px 24px;
+            border: 2px solid currentColor;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            transition: transform 0.2s;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.05);
+        }
+
+        .theme-btn.active {
+            transform: scale(1.1);
+        }
+
+        body.light .theme-btn.light {
+            background: #007bff;
+            color: white;
+            border-color: #007bff;
+        }
+
+        body.light .theme-btn.dark,
+        body.light .theme-btn.blue {
+            background: white;
+            color: #333;
+        }
+
+        body.dark .theme-btn.dark {
+            background: #ffc107;
+            color: #1a1a1a;
+            border-color: #ffc107;
+        }
+
+        body.dark .theme-btn.light,
+        body.dark .theme-btn.blue {
+            background: #333;
+            color: white;
+        }
+
+        body.blue .theme-btn.blue {
+            background: #60a5fa;
+            color: #1e3a5f;
+            border-color: #60a5fa;
+        }
+
+        body.blue .theme-btn.light,
+        body.blue .theme-btn.dark {
+            background: #2d4a6f;
+            color: #e0e7ff;
+        }
+
+        .content {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 30px;
+            border-radius: 8px;
+        }
+
+        body.dark .content {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        body.blue .content {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .theme-info {
+            margin-top: 30px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.03);
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        body.dark .theme-info {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        body.blue .theme-info {
+            background: rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body class="light" data-theme="light">
+    <div class="container">
+        <h1>Theme Switcher</h1>
+
+        <div class="theme-buttons">
+            <button class="theme-btn light active" data-theme="light">Light</button>
+            <button class="theme-btn dark" data-theme="dark">Dark</button>
+            <button class="theme-btn blue" data-theme="blue">Blue</button>
+        </div>
+
+        <div class="content">
+            <p>
+                This is a theme switcher demonstration. Click any of the buttons above to change the theme.
+            </p>
+            <p>
+                The current theme is applied using setAttribute() method and stored in a custom data-theme attribute.
+            </p>
+            <p>
+                All theme changes persist across the page and demonstrate proper use of DOM manipulation techniques.
+            </p>
+        </div>
+
+        <div class="theme-info">
+            <strong>Current Theme:</strong> <span id="currentTheme">Light</span>
+        </div>
+    </div>
+
+    <script src="q4_theme_switcher.js"></script>
+</body>
+
+</html>
