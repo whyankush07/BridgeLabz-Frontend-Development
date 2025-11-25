@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q5: Movie Ticket Booking</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        input.valid {
+            border-color: #28a745;
+            background: #f0fff4;
+        }
+
+        input.invalid {
+            border-color: #dc3545;
+            background: #fff5f5;
+        }
+
+        .error {
+            color: #dc3545;
+            font-size: 12px;
+            margin-top: 5px;
+            display: none;
+        }
+
+        .error.show {
+            display: block;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #5568d3;
+        }
+
+        .ticket {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 2px dashed #667eea;
+            display: none;
+        }
+
+        .ticket h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .ticket-info {
+            margin: 10px 0;
+        }
+
+        .ticket-info strong {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Movie Ticket Booking</h1>
+
+        <form id="bookingForm">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <div class="error" id="nameError">Name must contain only alphabets</div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" placeholder="your@email.com">
+                <div class="error" id="emailError">Enter a valid email address</div>
+            </div>
+
+            <div class="form-group">
+                <label for="seats">Number of Seats (1-10):</label>
+                <input type="number" id="seats" placeholder="Enter seats (1-10)" min="1" max="10">
+                <div class="error" id="seatsError">Seats must be between 1 and 10</div>
+            </div>
+
+            <button type="submit">Book Tickets</button>
+        </form>
+
+        <div class="ticket" id="ticket">
+            <h2>Booking Confirmed!</h2>
+            <div class="ticket-info">
+                <strong>Name:</strong> <span id="ticketName"></span>
+            </div>
+            <div class="ticket-info">
+                <strong>Email:</strong> <span id="ticketEmail"></span>
+            </div>
+            <div class="ticket-info">
+                <strong>Seats:</strong> <span id="ticketSeats"></span>
+            </div>
+            <div class="ticket-info">
+                <strong>Booking ID:</strong> <span id="bookingId"></span>
+            </div>
+        </div>
+    </div>
+
+    <script src="q5_movie_ticket_booking.js"></script>
+</body>
+
+</html>
