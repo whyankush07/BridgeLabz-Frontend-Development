@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-Sizing Comparison</title>
+    <link rel="stylesheet" href="question8.css">
+</head>
+<body>
+    <header>
+        <h1>Box-Sizing Property Comparison</h1>
+    </header>
+
+    <main class="container">
+        <section class="box-example content-box">
+            <h2>Content Box (Default)</h2>
+            <div class="box">
+                <p>Width: 300px</p>
+                <p>Padding: 20px</p>
+                <p>Border: 2px</p>
+                <p class="total">Total Width: 344px</p>
+            </div>
+            <p class="explanation">
+                With content-box, padding and border are added to the specified width
+            </p>
+        </section>
+
+        <section class="box-example border-box">
+            <h2>Border Box</h2>
+            <div class="box">
+                <p>Width: 300px</p>
+                <p>Padding: 20px</p>
+                <p>Border: 2px</p>
+                <p class="total">Total Width: 300px</p>
+            </div>
+            <p class="explanation">
+                With border-box, padding and border are included in the specified width
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Nakul Saini</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini UI Layout</title>
+    <link rel="stylesheet" href="question10.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="main-header">
+            <h1>Profile Update</h1>
+            <nav>
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Settings</a>
+                <a href="#" class="nav-link">Help</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="content-card">
+                <div class="profile-section">
+                    <img src="https://picsum.photos/1099" alt="Profile" class="profile-image">
+                    <h2>Edit Profile</h2>
+                </div>
+
+                <form class="profile-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" placeholder="Enter your name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bio">Bio</label>
+                        <textarea id="bio" placeholder="Tell us about yourself"></textarea>
+                    </div>
+
+                    <div class="button-group">
+                        <button type="submit" class="btn primary">Save Changes</button>
+                        <button type="button" class="btn secondary">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+
+        <footer class="main-footer">
+            <p>&copy; 2025 Nakul Saini</p>
+        </footer>
+    </div>
+</body>
+</html>

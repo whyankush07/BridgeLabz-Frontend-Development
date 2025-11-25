@@ -1,0 +1,134 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Element Selectors */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Main Content Sections */
+section {
+    margin: 30px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #2196F3;
+    margin-bottom: 15px;
+}
+
+/* Class Selectors */
+.highlight {
+    background-color: #fff3cd;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.warning {
+    border-left: 4px solid #ffc107;
+}
+
+/* ID Selector */
+#unique {
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Attribute Selectors */
+input[type="text"] {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="email"] {
+    padding: 8px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    border-color: #2196F3;
+}
+
+a[target="_blank"] {
+    color: #dc3545;
+    text-decoration: none;
+    padding-right: 20px;
+    position: relative;
+}
+
+a[target="_blank"]::after {
+    content: '↗';
+    position: absolute;
+    right: 0;
+}
+
+/* Combinator Selectors */
+/* Direct child selector (>) */
+.parent > p {
+    color: #6610f2;
+}
+
+/* Adjacent sibling selector (+) */
+h2 + p {
+    font-style: italic;
+}
+
+/* General sibling selector (~) */
+.parent ~ p {
+    color: #e83e8c;
+}
+
+/* Descendant selector (space) */
+.parent span {
+    background-color: #e9ecef;
+    padding: 2px 5px;
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section {
+        margin: 15px 0;
+    }
+}
