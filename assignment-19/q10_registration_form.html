@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    input.invalid {
+      border-color: #dc3545;
+    }
+
+    .error-message {
+      color: #dc3545;
+      font-size: 0.9em;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 15px;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .submit-btn:hover {
+      background: #5568d3;
+    }
+
+    .success-message {
+      background: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+      display: none;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .requirements {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>User Registration</h1>
+
+    <form id="registrationForm">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name">
+        <div class="error-message" id="nameError">Name cannot be empty</div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <div class="error-message" id="emailError">Please enter a valid email address</div>
+        <div class="requirements">Email must be in valid format (e.g., user@example.com)</div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password">
+        <div class="error-message" id="passwordError">Password must be at least 8 characters</div>
+        <div class="requirements">Password must contain at least 8 characters</div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+        <div class="error-message" id="confirmPasswordError">Passwords do not match</div>
+      </div>
+
+      <button type="submit" class="submit-btn">Register</button>
+    </form>
+
+    <div class="success-message" id="successMessage">
+      Registration successful! Welcome aboard.
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="q10_registration_form.js"></script>
+</body>
+</html>

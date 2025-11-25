@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Offers</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .controls {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background: #5568d3;
+    }
+
+    .banner-container {
+      position: relative;
+      height: 250px;
+      margin-bottom: 20px;
+    }
+
+    .banner {
+      position: absolute;
+      width: 100%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .banner h2 {
+      margin: 0 0 10px 0;
+      font-size: 2em;
+    }
+
+    .banner p {
+      margin: 0;
+      font-size: 1.2em;
+    }
+
+    .banner.hidden {
+      display: none;
+    }
+
+    #banner1 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    #banner2 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+    #banner3 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+    #banner4 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+    #banner5 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+
+    .static-banners {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      margin-top: 30px;
+    }
+
+    .static-banner {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Special Offers</h1>
+  
+  <div class="controls">
+    <button id="hideBanner">Hide Current</button>
+    <button id="showBanner">Show All</button>
+    <button id="slideToggle">Slide Toggle</button>
+    <button id="fadeToggle">Fade Toggle</button>
+    <button id="startRotation">Start Auto Rotate</button>
+    <button id="stopRotation">Stop Rotate</button>
+  </div>
+
+  <div class="banner-container">
+    <div class="banner" id="banner1">
+      <h2>50% OFF</h2>
+      <p>Electronics Sale - Limited Time Only!</p>
+    </div>
+    <div class="banner hidden" id="banner2">
+      <h2>Buy 1 Get 1</h2>
+      <p>Fashion Collection - This Weekend</p>
+    </div>
+    <div class="banner hidden" id="banner3">
+      <h2>Free Shipping</h2>
+      <p>On Orders Above ₹999</p>
+    </div>
+    <div class="banner hidden" id="banner4">
+      <h2>Clearance Sale</h2>
+      <p>Up to 70% Off - Last Chance!</p>
+    </div>
+    <div class="banner hidden" id="banner5">
+      <h2>New Arrivals</h2>
+      <p>Latest Collection Just Dropped</p>
+    </div>
+  </div>
+
+  <div class="static-banners">
+    <div class="static-banner">
+      <h3>Flash Deal</h3>
+      <p>Ends in 2 hours</p>
+    </div>
+    <div class="static-banner">
+      <h3>Member Special</h3>
+      <p>Extra 10% for members</p>
+    </div>
+    <div class="static-banner">
+      <h3>Student Discount</h3>
+      <p>15% off with ID</p>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="q4_special_offers.js"></script>
+</body>
+</html>

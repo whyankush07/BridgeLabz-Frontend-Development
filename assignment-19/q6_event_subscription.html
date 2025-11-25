@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Subscription Panel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .controls {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin: 5px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #5568d3;
+    }
+
+    .subscription-list {
+      margin-top: 20px;
+    }
+
+    .subscription-item {
+      background: #f8f8f8;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .subscription-item:hover {
+      background: #e8e8e8;
+    }
+
+    .subscription-item.active {
+      background: #d4edda;
+      border-left: 4px solid #28a745;
+    }
+
+    .subscription-item.inactive {
+      background: #f8d7da;
+      border-left: 4px solid #dc3545;
+    }
+
+    .topic-name {
+      font-weight: bold;
+    }
+
+    .status {
+      font-size: 0.9em;
+      color: #666;
+    }
+
+    .remove-btn {
+      background: #dc3545;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 0.9em;
+    }
+
+    .message {
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 5px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .success {
+      background: #d4edda;
+      color: #155724;
+    }
+
+    .info {
+      background: #d1ecf1;
+      color: #0c5460;
+    }
+
+    #newTopicInput {
+      width: 70%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Subscription Management</h1>
+
+    <div class="controls">
+      <input type="text" id="newTopicInput" placeholder="Enter new topic name">
+      <button id="addTopic">Add Topic</button>
+    </div>
+
+    <div class="subscription-list">
+      <div class="subscription-item" data-topic="tech-news">
+        <div>
+          <div class="topic-name">Technology News</div>
+          <div class="status">Click to subscribe/unsubscribe</div>
+        </div>
+        <button class="remove-btn">Remove</button>
+      </div>
+
+      <div class="subscription-item" data-topic="sports-updates">
+        <div>
+          <div class="topic-name">Sports Updates</div>
+          <div class="status">Click to subscribe/unsubscribe</div>
+        </div>
+        <button class="remove-btn">Remove</button>
+      </div>
+
+      <div class="subscription-item" data-topic="weather-alerts">
+        <div>
+          <div class="topic-name">Weather Alerts</div>
+          <div class="status">Click to subscribe/unsubscribe</div>
+        </div>
+        <button class="remove-btn">Remove</button>
+      </div>
+
+      <div class="subscription-item" data-topic="entertainment">
+        <div>
+          <div class="topic-name">Entertainment</div>
+          <div class="status">Click to subscribe/unsubscribe</div>
+        </div>
+        <button class="remove-btn">Remove</button>
+      </div>
+
+      <div class="subscription-item" data-topic="finance">
+        <div>
+          <div class="topic-name">Finance & Business</div>
+          <div class="status">Click to subscribe/unsubscribe</div>
+        </div>
+        <button class="remove-btn">Remove</button>
+      </div>
+    </div>
+
+    <div id="messageContainer"></div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="q6_event_subscription.js"></script>
+</body>
+</html>

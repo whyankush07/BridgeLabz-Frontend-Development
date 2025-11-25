@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Highlight</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .product {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .product.highlight {
+      background: #fff3cd;
+      border: 2px solid #ffc107;
+    }
+
+    .product.selected {
+      border: 2px solid #28a745;
+    }
+
+    .product[data-discount="true"] {
+      border-left: 4px solid #dc3545;
+    }
+
+    .product h3 {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+
+    .price {
+      font-size: 1.2em;
+      color: #667eea;
+      font-weight: bold;
+    }
+
+    .details {
+      display: none;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid #ddd;
+      color: #666;
+    }
+
+    .favorite {
+      float: right;
+      cursor: pointer;
+      font-size: 1.5em;
+      color: #ccc;
+    }
+
+    .favorite.selected {
+      color: #dc3545;
+    }
+
+    .stock-status {
+      margin-top: 10px;
+      font-size: 0.9em;
+    }
+
+    .in-stock {
+      color: #28a745;
+    }
+
+    .out-of-stock {
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <h1>Product Catalog</h1>
+  
+  <div class="products">
+    <div class="product" data-stock="in" data-discount="true">
+      <span class="favorite">♥</span>
+      <h3>Wireless Headphones</h3>
+      <p class="price">₹2,499</p>
+      <p class="stock-status in-stock">In Stock</p>
+      <div class="details">
+        <p>Premium sound quality with noise cancellation</p>
+        <p>Battery life: 30 hours</p>
+      </div>
+    </div>
+
+    <div class="product" data-stock="in" data-discount="false">
+      <span class="favorite">♥</span>
+      <h3>Smart Watch</h3>
+      <p class="price">₹4,999</p>
+      <p class="stock-status in-stock">In Stock</p>
+      <div class="details">
+        <p>Fitness tracking and heart rate monitor</p>
+        <p>Water resistant up to 50m</p>
+      </div>
+    </div>
+
+    <div class="product" data-stock="out" data-discount="true">
+      <span class="favorite">♥</span>
+      <h3>Bluetooth Speaker</h3>
+      <p class="price">₹1,799</p>
+      <p class="stock-status out-of-stock">Out of Stock</p>
+      <div class="details">
+        <p>360-degree sound with deep bass</p>
+        <p>Battery life: 12 hours</p>
+      </div>
+    </div>
+
+    <div class="product" data-stock="in" data-discount="false">
+      <span class="favorite">♥</span>
+      <h3>Laptop Stand</h3>
+      <p class="price">₹899</p>
+      <p class="stock-status in-stock">In Stock</p>
+      <div class="details">
+        <p>Adjustable height and angle</p>
+        <p>Aluminum construction</p>
+      </div>
+    </div>
+
+    <div class="product" data-stock="in" data-discount="true">
+      <span class="favorite">♥</span>
+      <h3>USB-C Hub</h3>
+      <p class="price">₹1,299</p>
+      <p class="stock-status in-stock">In Stock</p>
+      <div class="details">
+        <p>7-in-1 connectivity solution</p>
+        <p>4K HDMI output support</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="q2_product_highlight.js"></script>
+</body>
+</html>

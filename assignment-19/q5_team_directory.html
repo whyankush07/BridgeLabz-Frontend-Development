@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Directory</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .controls {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .department {
+            background: white;
+            margin-bottom: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .dept-header {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #667eea;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .team-members {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .member {
+            background: #f8f8f8;
+            padding: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .member:hover {
+            background: #e8e8e8;
+        }
+
+        .member.highlight {
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+
+        .member.manager {
+            background: #d4edda;
+            font-weight: bold;
+        }
+
+        .member-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .member-role {
+            font-size: 0.9em;
+            color: #666;
+        }
+
+        .contact-info {
+            display: none;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .dept-highlight {
+            background: #e7f3ff !important;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Team Members Directory</h1>
+
+    <div class="controls">
+        <button id="randomEmployee">Highlight Random Employee</button>
+        <button id="toggleAll">Collapse/Expand All</button>
+    </div>
+
+    <div class="department" data-dept="engineering">
+        <div class="dept-header">Engineering Department</div>
+        <div class="team-members">
+            <div class="member manager" data-manager="true">
+                <div class="member-name">Rajesh Kumar</div>
+                <div class="member-role">Engineering Manager</div>
+                <div class="contact-info">rajesh@company.com | Ext: 101</div>
+            </div>
+            <div class="member" data-reports-to="Rajesh Kumar">
+                <div class="member-name">Priya Sharma</div>
+                <div class="member-role">Senior Developer</div>
+                <div class="contact-info">priya@company.com | Ext: 102</div>
+            </div>
+            <div class="member" data-reports-to="Rajesh Kumar">
+                <div class="member-name">Amit Patel</div>
+                <div class="member-role">Full Stack Developer</div>
+                <div class="contact-info">amit@company.com | Ext: 103</div>
+            </div>
+            <div class="member" data-reports-to="Rajesh Kumar">
+                <div class="member-name">Sneha Gupta</div>
+                <div class="member-role">Frontend Developer</div>
+                <div class="contact-info">sneha@company.com | Ext: 104</div>
+            </div>
+            <div class="member" data-reports-to="Rajesh Kumar">
+                <div class="member-name">Vikram Singh</div>
+                <div class="member-role">Backend Developer</div>
+                <div class="contact-info">vikram@company.com | Ext: 105</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="department" data-dept="marketing">
+        <div class="dept-header">Marketing Department</div>
+        <div class="team-members">
+            <div class="member manager" data-manager="true">
+                <div class="member-name">Anita Desai</div>
+                <div class="member-role">Marketing Manager</div>
+                <div class="contact-info">anita@company.com | Ext: 201</div>
+            </div>
+            <div class="member" data-reports-to="Anita Desai">
+                <div class="member-name">Rahul Verma</div>
+                <div class="member-role">Digital Marketing Specialist</div>
+                <div class="contact-info">rahul@company.com | Ext: 202</div>
+            </div>
+            <div class="member" data-reports-to="Anita Desai">
+                <div class="member-name">Kavya Nair</div>
+                <div class="member-role">Content Writer</div>
+                <div class="contact-info">kavya@company.com | Ext: 203</div>
+            </div>
+            <div class="member" data-reports-to="Anita Desai">
+                <div class="member-name">Suresh Reddy</div>
+                <div class="member-role">Social Media Manager</div>
+                <div class="contact-info">suresh@company.com | Ext: 204</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="q5_team_directory.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Courses</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .search-container {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    #searchInput {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    #searchInput:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    .clear-btn {
+      background: #dc3545;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .match-count {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #667eea;
+    }
+
+    .course-list {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .course {
+      padding: 15px;
+      margin: 10px 0;
+      background: #f8f8f8;
+      border-radius: 5px;
+      border-left: 4px solid #667eea;
+    }
+
+    .course.hidden {
+      display: none;
+    }
+
+    .course-title {
+      font-weight: bold;
+      font-size: 1.1em;
+      color: #333;
+    }
+
+    .course-description {
+      color: #666;
+      margin-top: 5px;
+    }
+
+    .highlight {
+      background-color: yellow;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Online Learning Platform</h1>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search courses...">
+    <button class="clear-btn" id="clearSearch">Clear Search</button>
+    <div class="match-count" id="matchCount"></div>
+  </div>
+
+  <div class="course-list">
+    <div class="course" data-title="JavaScript Fundamentals" data-description="Learn the basics of JavaScript programming language">
+      <div class="course-title">JavaScript Fundamentals</div>
+      <div class="course-description">Learn the basics of JavaScript programming language</div>
+    </div>
+
+    <div class="course" data-title="React Advanced Concepts" data-description="Master React hooks, context API and performance optimization">
+      <div class="course-title">React Advanced Concepts</div>
+      <div class="course-description">Master React hooks, context API and performance optimization</div>
+    </div>
+
+    <div class="course" data-title="Python for Data Science" data-description="Explore data analysis and machine learning with Python">
+      <div class="course-title">Python for Data Science</div>
+      <div class="course-description">Explore data analysis and machine learning with Python</div>
+    </div>
+
+    <div class="course" data-title="Web Design Principles" data-description="Create beautiful and responsive websites with modern CSS">
+      <div class="course-title">Web Design Principles</div>
+      <div class="course-description">Create beautiful and responsive websites with modern CSS</div>
+    </div>
+
+    <div class="course" data-title="Node.js Backend Development" data-description="Build scalable server-side applications with Node.js">
+      <div class="course-title">Node.js Backend Development</div>
+      <div class="course-description">Build scalable server-side applications with Node.js</div>
+    </div>
+
+    <div class="course" data-title="Database Management with SQL" data-description="Master database design and SQL queries">
+      <div class="course-title">Database Management with SQL</div>
+      <div class="course-description">Master database design and SQL queries</div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="q7_search_courses.js"></script>
+</body>
+</html>

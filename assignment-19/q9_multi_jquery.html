@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi jQuery Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .dashboard {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .widget {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .widget.active {
+      border: 3px solid #667eea;
+    }
+
+    .widget-title {
+      font-size: 1.2em;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .carousel {
+      position: relative;
+      height: 200px;
+      overflow: hidden;
+      background: #f8f8f8;
+      border-radius: 5px;
+    }
+
+    .carousel-item {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2em;
+      color: white;
+      display: none;
+    }
+
+    .carousel-item.active {
+      display: flex;
+    }
+
+    .carousel-item:nth-child(1) { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .carousel-item:nth-child(2) { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+    .carousel-item:nth-child(3) { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+
+    .notification-btn {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      z-index: 1000;
+      min-width: 300px;
+    }
+
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      z-index: 999;
+    }
+
+    .close-modal {
+      background: #dc3545;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      float: right;
+    }
+
+    .tooltip {
+      position: absolute;
+      background: #333;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 5px;
+      font-size: 0.9em;
+      display: none;
+      z-index: 100;
+      white-space: nowrap;
+    }
+
+    .widget-item {
+      padding: 10px;
+      margin: 5px 0;
+      background: #f8f8f8;
+      border-radius: 5px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .widget-item:hover {
+      background: #e8e8e8;
+    }
+  </style>
+</head>
+<body>
+  <h1>Multi-jQuery Dashboard</h1>
+
+  <div class="dashboard">
+    <div class="widget" id="carouselWidget">
+      <div class="widget-title">Image Carousel (jQuery v1)</div>
+      <div class="carousel">
+        <div class="carousel-item active">Slide 1</div>
+        <div class="carousel-item">Slide 2</div>
+        <div class="carousel-item">Slide 3</div>
+      </div>
+    </div>
+
+    <div class="widget" id="notificationWidget">
+      <div class="widget-title">Notifications (jQuery v2)</div>
+      <button class="notification-btn" data-message="You have 5 new messages">Show Messages</button>
+      <button class="notification-btn" data-message="2 tasks are pending">Show Tasks</button>
+      <button class="notification-btn" data-message="System update available">Show Updates</button>
+    </div>
+
+    <div class="widget" id="activeWidget">
+      <div class="widget-title">Widget Highlighter (jQuery v1)</div>
+      <div class="widget-item" data-tooltip="Click to activate carousel">Activate Carousel</div>
+      <div class="widget-item" data-tooltip="Click to activate notifications">Activate Notifications</div>
+      <div class="widget-item" data-tooltip="Click to activate analytics">Activate Analytics</div>
+    </div>
+
+    <div class="widget" id="tooltipWidget">
+      <div class="widget-title">Tooltip Items (jQuery v2)</div>
+      <div class="widget-item" data-tooltip="User profile settings">Profile</div>
+      <div class="widget-item" data-tooltip="Account security options">Security</div>
+      <div class="widget-item" data-tooltip="Notification preferences">Preferences</div>
+      <div class="widget-item" data-tooltip="Help and documentation">Help</div>
+      <div class="widget-item" data-tooltip="Sign out from account">Logout</div>
+    </div>
+  </div>
+
+  <div class="modal-overlay"></div>
+  <div class="modal">
+    <button class="close-modal">Close</button>
+    <h2>Notification</h2>
+    <p id="modalMessage"></p>
+  </div>
+
+  <div class="tooltip" id="tooltip"></div>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="q9_multi_jquery.js"></script>
+</body>
+</html>

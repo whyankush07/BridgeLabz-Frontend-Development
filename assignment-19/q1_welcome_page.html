@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        #greeting {
+            font-size: 2em;
+            color: #333;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        #greeting:hover {
+            color: #667eea;
+        }
+
+        #welcomeMessage {
+            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        button {
+            background: #667eea;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 10px 10px 10px 0;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #5568d3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="greeting"></h1>
+        <div id="welcomeMessage">
+            <p>Welcome to our website! We're glad to have you here.</p>
+        </div>
+        <button id="changeGreeting">Change Greeting</button>
+        <button id="toggleMessage">Toggle Welcome Message</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="q1_welcome_page.js"></script>
+</body>
+
+</html>
