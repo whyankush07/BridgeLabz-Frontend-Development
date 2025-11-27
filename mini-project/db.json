@@ -1,0 +1,32 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "name": "Vanya Joshi",
+      "section": "C",
+      "marks": 92,
+      "grade": "A"
+    },
+    {
+      "id": 2,
+      "name": "Rahul Menon",
+      "section": "B",
+      "marks": 78,
+      "grade": "B"
+    },
+    {
+      "name": "Raghav",
+      "section": "M",
+      "marks": 81,
+      "grade": "B",
+      "id": 3
+    },
+    {
+      "name": "Nakul",
+      "section": "K",
+      "marks": 87,
+      "grade": "A",
+      "id": 4
+    }
+  ]
+}
